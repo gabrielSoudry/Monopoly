@@ -152,8 +152,6 @@ namespace Monopoly_TD7.model
             int[] rent39 = { 2, 10, 30, 90, 160, 250 };
             lands[39] = new PropertyLand(60, "Mediterranean Avenue", rent, "purple");
 
-            int[] rent40= { 2, 10, 30, 90, 160, 250 };
-            lands[40] = new PropertyLand(60, "Mediterranean Avenue", rent, "purple");
 
            
 
