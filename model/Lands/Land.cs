@@ -21,7 +21,13 @@ namespace Monopoly_TD7.model.Lands
             Property,
             GoToJail,
             VisitJail,
-            CommunityChest
+            CommunityChest,
+            FreePark,
+            Tax,
+            RailRoad,
+            Chance,
+            Company
+
         }
 
 

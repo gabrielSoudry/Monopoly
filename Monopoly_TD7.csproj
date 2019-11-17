@@ -68,7 +68,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="model\Lands\ChanceLand.cs" />
     <Compile Include="model\Lands\CommunityChestLand.cs" />
+    <Compile Include="model\Lands\CompanyLand.cs" />
+    <Compile Include="model\Lands\FreeParkLand.cs" />
+    <Compile Include="model\Lands\GoToJailLand.cs" />
+    <Compile Include="model\Lands\RailRoadLand.cs" />
+    <Compile Include="model\Lands\TaxLand.cs" />
     <Compile Include="Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
