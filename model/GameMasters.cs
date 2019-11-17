@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Monopoly_TD7.model
 {
-    sealed class GameMasters
+    public sealed class GameMasters
     {
         private static GameMasters instance = null;
         private List<Player> players;

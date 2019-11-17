@@ -8,3 +8,5 @@ before_build:
 build:
   project: Monopoly_TD7.sln
   verbosity: minimal
+ 
+ 
