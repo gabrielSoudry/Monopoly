@@ -1,6 +1,8 @@
 ﻿language: csharp
-solution:Monopoly_TD7.sln
-mono:
-  - latest
-  - 3.12.0
-  - 3.10.0
+solution: Monopoly_TD7.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore s Monopoly_TD7.sln
+after_script:
+  - nunit-console Tests/bin/Release/Tests.dll
