@@ -37,15 +37,9 @@ namespace Monopoly_TD7
 
         void StartMonopoly(object sender, RoutedEventArgs e)
         {
-
             Setting setting = new Setting();
             setting.Show();
             game = GameMasters.Instance;
-
-            string jsonTypeNameAll = JsonConvert.SerializeObject(game, Formatting.Indented, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.All
-            });
 
             string jsonTypeNameAuto = JsonConvert.SerializeObject(game, Formatting.Indented, new JsonSerializerSettings
             {
@@ -61,11 +55,8 @@ namespace Monopoly_TD7
             Console.WriteLine("==============");
             Console.WriteLine(game2.board.lands[1].ToString());
             Console.WriteLine("==============");
-
-
           
             this.Close();
-
            
             /*
             Numplayers numplayer = new Numplayers(1);
