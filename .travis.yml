@@ -1,2 +1,6 @@
 ﻿language: csharp
 solution:Monopoly_TD7.sln
+mono:
+  - latest
+  - 3.12.0
+  - 3.10.0
