@@ -1,0 +1,10 @@
+﻿image: Visual Studio 2019
+
+before_build:
+- nuget restore
+- choco install opencover.portable
+- choco install codecov
+
+build:
+  project: Monopoly_TD7.sln
+  verbosity: minimal
