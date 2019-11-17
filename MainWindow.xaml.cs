@@ -23,11 +23,34 @@ namespace Monopoly_TD7
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            NavigationService ns = NavigationService.GetNavigationService(this); //Line 2
+
         }
 
-        private void InitializeComponent()
+        void StartMonopoly(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Setting setting = new Setting();
+            setting.Show();
+            this.Close();
+
+           
+            /*
+            Numplayers numplayer = new Numplayers(1);
+            numplayer.Show();
+            game = GameController.Instance;
+            board = game.board;
+            players = game.players;
+            lands = game.board.lands;
+
+            currentPlayer = game.currentPlayer();
+            this.Close();
+    */
+        }
+
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
