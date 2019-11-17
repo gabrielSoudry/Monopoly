@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monopoly_TD7.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,18 +21,26 @@ namespace Monopoly_TD7
     /// </summary>
     public partial class MainWindow : Window
     {
+        GameMasters game;
+        List<Player> players;
+        Board board;
+
+        Player currentPlayer;
+        
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            NavigationService ns = NavigationService.GetNavigationService(this); //Line 2
-
         }
 
         void StartMonopoly(object sender, RoutedEventArgs e)
         {
+
             Setting setting = new Setting();
             setting.Show();
+            game = GameMasters.Instance;
+            
+
             this.Close();
 
            
