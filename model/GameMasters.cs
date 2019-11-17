@@ -8,5 +8,6 @@ namespace Monopoly_TD7.model
 {
     class GameMasters
     {
+
     }
 }
