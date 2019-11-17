@@ -8,29 +8,16 @@ using System.Web.Script.Serialization;
 
 namespace Monopoly_TD7.model
 {
-    public sealed class Board
+    public class Board
     {
-        private static Board board;
         private static readonly object padlock = new object();
-        public static Land[] lands { get; set; }
+        public Land[] lands { get; set; }
 
-        private Board() => (board,lands) = (null,new Land[40]);
-        public static Board Instance
-        {
-            get
-            {
-                lock (padlock)
-                {
-                    if (board == null)
-                    {
-                        board = new Board();
-                    }
-                    return board;
-                }
-            }
-        }
+        
+        public Board() => (lands) = (new Land[40]);
+        
 
-        public static void setUp()
+        public void setUp()
         {
 
             lands[0] = new StartLand();

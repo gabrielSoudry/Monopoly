@@ -10,15 +10,17 @@ namespace Monopoly_TD7.model
     {
         private static GameMasters instance = null;
         private List<Player> players;
-        static private Board board;
+        public Board board;
         static Player currentPlayer;
 
 
         private GameMasters ()
         {
-            board = Board.Instance;
-            Board.setUp();
+            board = new Board();
+            board.setUp();
         }
+
+
 
         public static GameMasters Instance
         {

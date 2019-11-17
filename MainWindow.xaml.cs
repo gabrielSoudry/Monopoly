@@ -1,4 +1,6 @@
 ﻿using Monopoly_TD7.model;
+using Monopoly_TD7.model.Lands;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,8 +41,29 @@ namespace Monopoly_TD7
             Setting setting = new Setting();
             setting.Show();
             game = GameMasters.Instance;
-            
 
+            string jsonTypeNameAll = JsonConvert.SerializeObject(game, Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.All
+            });
+
+            string jsonTypeNameAuto = JsonConvert.SerializeObject(game, Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+
+
+            GameMasters game2 = JsonConvert.DeserializeObject<GameMasters>(jsonTypeNameAuto, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+
+            Console.WriteLine("==============");
+            Console.WriteLine(game2.board.lands[1].ToString());
+            Console.WriteLine("==============");
+
+
+          
             this.Close();
 
            

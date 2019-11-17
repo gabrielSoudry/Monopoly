@@ -10,7 +10,7 @@ namespace Monopoly_TD7.model.Lands
     {
         public LandType Type { get; set; }
         public int Position { get; set; }
- 
+
 
 
         public int building;
@@ -30,10 +30,9 @@ namespace Monopoly_TD7.model.Lands
 
         }
 
-
-        public static string ToString(LandType landtype)
+        public override string ToString()
         {
-            return landtype.ToString();
+            return null;
         }
     }
 }

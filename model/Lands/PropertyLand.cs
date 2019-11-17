@@ -26,5 +26,10 @@ namespace Monopoly_TD7.model.Lands
             Multipledrent = multipledrent;
             Color = color;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
