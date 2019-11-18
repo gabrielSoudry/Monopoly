@@ -8,4 +8,9 @@ Monopoly is a board game played by two to eight players. It is played on a board
 This is an implementation of Monopoly game using WPF and using the maximun of code good practice :
 Design Pattern + Uning Testing + C# Naming Conventions + Continuous Integration
 
+# Project overview
 
+
+Menu            |  Setting
+:-------------------------:|:-------------------------:
+![test](https://drive.google.com/uc?export=view&id=17VpjOB9ku9tJ6lG6Nrc-U1aG3-8VlkqU) |![](https://drive.google.com/uc?export=view&id=1F284N-MQkFerQ-PhZ8XdqEw2h8IUC5hS)
