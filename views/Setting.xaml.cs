@@ -24,5 +24,13 @@ namespace Monopoly_TD7
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
+
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            Monopoly a = new Monopoly();
+            this.Close();
+            a.Show();
+        }   
     }
 }

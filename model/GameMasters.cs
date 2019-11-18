@@ -17,7 +17,6 @@ namespace Monopoly_TD7.model
         private GameMasters ()
         {
             board = new Board();
-            board.setUp();
         }
 
 

@@ -3,7 +3,9 @@ using Monopoly_TD7.model.Lands;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,7 +16,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Monopoly_TD7
 {
@@ -39,21 +40,18 @@ namespace Monopoly_TD7
         {
             Setting setting = new Setting();
             setting.Show();
-            game = GameMasters.Instance;
 
-            string jsonTypeNameAuto = JsonConvert.SerializeObject(game, Formatting.Indented, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.Auto
-            });
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"board.json");
+            Console.WriteLine(path);
+            string files = File.ReadAllText(path);
 
-
-            GameMasters game2 = JsonConvert.DeserializeObject<GameMasters>(jsonTypeNameAuto, new JsonSerializerSettings
+            GameMasters game = JsonConvert.DeserializeObject<GameMasters>(files, new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
 
             Console.WriteLine("==============");
-            Console.WriteLine(game2.board.lands[1].ToString());
+            Console.WriteLine(game.board.lands[1].ToString());
             Console.WriteLine("==============");
           
             this.Close();

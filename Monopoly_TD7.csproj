@@ -78,6 +78,9 @@
     <Compile Include="model\Lands\GoToJailLand.cs" />
     <Compile Include="model\Lands\RailRoadLand.cs" />
     <Compile Include="model\Lands\TaxLand.cs" />
+    <Compile Include="views\Monopoly.xaml.cs">
+      <DependentUpon>Monopoly.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="views\Monopoly.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="views\Setting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

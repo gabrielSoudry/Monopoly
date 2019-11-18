@@ -1,0 +1,66 @@
+﻿<Window x:Class="Monopoly_TD7.Monopoly"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monopoly_TD7"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="midWindow" Height="750" Width="700">
+    <Grid>
+        <Canvas x:Name="empty" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="368">
+            <Canvas x:Name="canvas" HorizontalAlignment="Left" Width="683" Height="696" VerticalAlignment="Bottom">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/img/background.jpg" Stretch="Fill"/>
+                </Canvas.Background>
+                <Rectangle x:Name="Tile22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="146" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="59" Canvas.Left="201" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile24" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="53" Canvas.Left="260" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile25" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="57" Canvas.Left="313" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile26" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="370" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile27" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="425" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile28" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="56" Canvas.Left="480" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile29" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="59" Canvas.Left="536" RenderTransformOrigin="0.818,0.44" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile30" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile20" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Left="6" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile21" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="57" Canvas.Left="89" Canvas.Top="5"/>
+                <Rectangle x:Name="Tile8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="146" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="59" Canvas.Left="201" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="53" Canvas.Left="260" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="57" Canvas.Left="313" Canvas.Top="605" RenderTransformOrigin="0.5,0.5"/>
+                <Rectangle x:Name="Tile4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="370" Canvas.Top="605" RenderTransformOrigin="0.489,0.504"/>
+                <Rectangle x:Name="Tile3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="425" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="56" Canvas.Left="480" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="59" Canvas.Left="536" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile0" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile10" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="89" Canvas.Top="605" Canvas.Left="5"/>
+                <Rectangle x:Name="Tile9" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="57" Canvas.Left="89" Canvas.Top="605"/>
+                <Rectangle x:Name="Tile19" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Top="96" Canvas.Left="6"/>
+                <Rectangle x:Name="Tile12" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="61" Stroke="Black" VerticalAlignment="Top" Width="84" Canvas.Top="489" Canvas.Left="5"/>
+                <Rectangle x:Name="Tile13" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="59" Stroke="Black" VerticalAlignment="Top" Width="83" Canvas.Top="430" Canvas.Left="5"/>
+                <Rectangle x:Name="Tile14" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="52" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Top="378" Canvas.Left="6"/>
+                <Rectangle x:Name="Tile15" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="56" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Top="322" Canvas.Left="6"/>
+                <Rectangle x:Name="Tile16" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Top="262" Canvas.Left="6"/>
+                <Rectangle x:Name="Tile17" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="54" Stroke="Black" VerticalAlignment="Top" Width="82" Canvas.Top="208" Canvas.Left="6"/>
+                <Rectangle x:Name="Tile18" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="61" Stroke="Black" VerticalAlignment="Top" Width="83" Canvas.Top="147" Canvas.Left="5"/>
+                <Rectangle x:Name="Tile11" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="55" Stroke="Black" VerticalAlignment="Top" Width="84" Canvas.Top="550" Canvas.Left="5"/>
+                <Rectangle x:Name="Tile31" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="56" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="91"/>
+                <Rectangle x:Name="Tile38" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="61" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="489"/>
+                <Rectangle x:Name="Tile37" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="439"/>
+                <Rectangle x:Name="Tile36" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="61" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="378"/>
+                <Rectangle x:Name="Tile35" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="56" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="322"/>
+                <Rectangle x:Name="Tile34" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="60" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="262" RenderTransformOrigin="1.08,0.939"/>
+                <Rectangle x:Name="Tile33" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="59" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="203"/>
+                <Rectangle x:Name="Tile32" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="56" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="147"/>
+                <Rectangle x:Name="Tile39" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="55" Stroke="Black" VerticalAlignment="Top" Width="88" Canvas.Left="595" Canvas.Top="550"/>
+                <Ellipse x:Name="player2" Fill="Green" HorizontalAlignment="Left" Height="19" Stroke="Black" VerticalAlignment="Top" Width="19" Canvas.Left="664" Canvas.Top="646" RenderTransformOrigin="0.885,0.417" />
+                <Ellipse x:Name="player1" Fill="Red" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="646" Width="19"/>
+                <Ellipse x:Name="player3" Fill="Yellow" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="677" Width="19"/>
+                <Ellipse x:Name="player4" Fill="Blue" Height="19" Canvas.Left="664" Stroke="Black" Canvas.Top="677" Width="19"/>
+            </Canvas>
+            <Button x:Name="dice" Content="Roll!" Canvas.Left="239" Canvas.Top="244" Width="75"/>
+            <TextBlock x:Name="gameInfo" Height="82" Canvas.Left="109" TextWrapping="Wrap" Text="" Canvas.Top="216" Width="102"/>
+        </Canvas>
+
+    </Grid>
+</Window>
