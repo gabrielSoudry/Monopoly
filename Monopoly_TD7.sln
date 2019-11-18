@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monopoly_TD7", "Monopoly_TD7.csproj", "{CD594110-7702-42EA-8201-3BC8DDB13300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{757E3E86-69BC-4FC1-856E-7AE4FDDDA43B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{CD594110-7702-42EA-8201-3BC8DDB13300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD594110-7702-42EA-8201-3BC8DDB13300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD594110-7702-42EA-8201-3BC8DDB13300}.Release|Any CPU.Build.0 = Release|Any CPU
-		{757E3E86-69BC-4FC1-856E-7AE4FDDDA43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{757E3E86-69BC-4FC1-856E-7AE4FDDDA43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{757E3E86-69BC-4FC1-856E-7AE4FDDDA43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{757E3E86-69BC-4FC1-856E-7AE4FDDDA43B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
