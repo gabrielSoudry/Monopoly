@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Setting" Height="350" Width="525">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="88,20,0,0" VerticalAlignment="Top" Width="405" RenderTransformOrigin="0.103,-0.3" Source="img/Setting.jpg"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="88,20,0,0" VerticalAlignment="Top" Width="405" RenderTransformOrigin="0.103,-0.3" Source="../img/Setting.jpg"/>
         <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="99,155,0,0" VerticalAlignment="Top" Width="263"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Width="120" >
             <ComboBoxItem>1 players</ComboBoxItem>
