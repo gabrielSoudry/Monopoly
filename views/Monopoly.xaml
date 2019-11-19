@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Monopoly_TD7"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="midWindow" Height="750" Width="700">
+        Title="Monopoly" Height="750" Width="700">
     <Grid>
         <Canvas x:Name="empty" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="368">
             <Canvas x:Name="canvas" HorizontalAlignment="Left" Width="683" Height="696" VerticalAlignment="Bottom">

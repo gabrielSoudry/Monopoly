@@ -9,9 +9,11 @@
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Left" Height="114" Margin="88,20,0,0" VerticalAlignment="Top" Width="405" RenderTransformOrigin="0.103,-0.3" Source="../img/Setting.jpg"/>
         <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="99,155,0,0" VerticalAlignment="Top" Width="263"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Width="120" >
-            <ComboBoxItem>1 players</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">2 players</ComboBoxItem>
+        <ComboBox  Name="cboPickOne" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="173,202,0,0" VerticalAlignment="Top" Width="120" >
+            <ComboBoxItem IsSelected="True">2</ComboBoxItem>
+            <ComboBoxItem>3</ComboBoxItem>
+            <ComboBoxItem>4</ComboBoxItem>
+
         </ComboBox>
         <Button x:Name="playButton" Content="Play " Background="AliceBlue" HorizontalAlignment="Left" Height="39" Margin="115,240,0,0" VerticalAlignment="Top" Width="247" Click="PlayButton_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="149,155,0,0"   FontSize="20" Text="Number of players" VerticalAlignment="Top" Width="190"/>

@@ -23,13 +23,7 @@ namespace Monopoly_TD7
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        GameMasters game;
-        List<Player> players;
-        Board board;
-
-        Player currentPlayer;
-        
+    { 
         public MainWindow()
         {
             InitializeComponent();
@@ -40,33 +34,7 @@ namespace Monopoly_TD7
         {
             Setting setting = new Setting();
             setting.Show();
-
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"board.json");
-            Console.WriteLine(path);
-            string files = File.ReadAllText(path);
-
-            GameMasters game = JsonConvert.DeserializeObject<GameMasters>(files, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.Auto
-            });
-
-            Console.WriteLine("==============");
-            Console.WriteLine(game.board.lands[1].ToString());
-            Console.WriteLine("==============");
-          
             this.Close();
-           
-            /*
-            Numplayers numplayer = new Numplayers(1);
-            numplayer.Show();
-            game = GameController.Instance;
-            board = game.board;
-            players = game.players;
-            lands = game.board.lands;
-
-            currentPlayer = game.currentPlayer();
-            this.Close();
-    */
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)
