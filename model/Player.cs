@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Monopoly_TD7.model.RollingDie;
 
 namespace Monopoly_TD7.model
 {
@@ -57,13 +58,15 @@ namespace Monopoly_TD7.model
             }
         }
 
-        public void move()
+        public randomDie move()
         {
-            this.landPosition += die.Roll();
+            randomDie result = die.Roll();
+            this.landPosition += (result.die1+ result.die2);
             if (this.landPosition>39)
             {
                 this.landPosition %= 39;
             }
+            return result;
         }
 
     }

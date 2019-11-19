@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Monopoly_TD7"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Monopoly" Height="720" Width="800">
+        Title="Monopoly" Height="720" Width="700">
     <Grid>
         <Canvas x:Name="empty" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="368">
             <Canvas x:Name="canvas" HorizontalAlignment="Left" Width="683" Height="696" VerticalAlignment="Bottom">
@@ -57,7 +57,8 @@
                 <Ellipse x:Name="player1" Fill="Red" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="646" Width="19"/>
                 <Ellipse x:Name="player3" Fill="Yellow" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="677" Width="19"/>
                 <Ellipse x:Name="player4" Fill="Blue" Height="19" Canvas.Left="664" Stroke="Black" Canvas.Top="677" Width="19"/>
-                <Image x:Name="image" Height="71" Canvas.Left="425" Canvas.Top="322" Width="67" Source="../img/dice_1.png"  />
+                <Image x:Name="dice1" Height="67" Canvas.Left="425" Canvas.Top="322" Width="71" Source="../img/dice1.png"  />
+                <Image x:Name="dice2" Height="67" Canvas.Left="510" Canvas.Top="322" Width="69" Source="/Monopoly_TD7;component/img/dice2.png"  />
             </Canvas>
             <Button x:Name="dice" Content="Roll!" Canvas.Left="239" Canvas.Top="244" Width="75" Click="Dice_Click"/>
             <TextBlock x:Name="gameInfo" Height="82" Canvas.Left="109" TextWrapping="Wrap" Text="" Canvas.Top="216" Width="102" />

@@ -155,10 +155,14 @@
     <Resource Include="img\Setting.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\dice_1.png" />
+    <Resource Include="img\dice1.png" />
+    <Resource Include="img\dice2.png" />
+    <Resource Include="img\dice4.png" />
+    <Resource Include="img\dice5.png" />
+    <Resource Include="img\dice6.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\dice_4.png" />
+    <Resource Include="img\dice3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

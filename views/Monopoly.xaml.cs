@@ -2,8 +2,11 @@
 using Monopoly_TD7.model.Lands;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static Monopoly_TD7.model.RollingDie;
 
 namespace Monopoly_TD7
 {
@@ -102,14 +106,34 @@ namespace Monopoly_TD7
             }
         }
 
+         
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("===");
             Console.WriteLine(gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString());
             Console.WriteLine("===");
 
-             gameMaster.Players[0].move();
-             playerSetPosition(0,gameMaster.Players[0].LandPosition);
+          
+            RollingDie a = new RollingDie();
+            int i = 0;
+
+            randomDie result = gameMaster.Players[0].move();
+            dice1.Source = new BitmapImage(new Uri(UrlImageDice(result.die1)));
+            dice2.Source = new BitmapImage(new Uri(UrlImageDice(result.die2)));
+
+
+            playerSetPosition(0,gameMaster.Players[0].LandPosition);
+        }
+
+        public string UrlImageDice(int number)
+        {
+            if (number == 1) { return Directory.GetCurrentDirectory() + @"../../../img/dice1.png"; }
+            else if (number == 2) { return Directory.GetCurrentDirectory() + @"../../../img/dice2.png"; }
+            else if (number == 3) { return Directory.GetCurrentDirectory() + @"../../../img/dice3.png"; }
+            else if (number == 4) { return Directory.GetCurrentDirectory() + @"../../../img/dice4.png"; }
+            else if (number == 5) { return Directory.GetCurrentDirectory() + @"../../../img/dice5.png"; }
+            else { return Directory.GetCurrentDirectory() + @"../../../img/dice6.png"; }
+
         }
 
         private void Purchase(object sender, RoutedEventArgs e)
