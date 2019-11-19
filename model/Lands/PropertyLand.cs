@@ -13,7 +13,7 @@ namespace Monopoly_TD7.model.Lands
         public String Name { get; set; }
         public int [] Multipledrent { get; set; }
         public string Color { get; set; }
-        public Player LandOwner { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Player LandOwner { get ; set ; }
 
         public PropertyLand ()=> (Type,Position) = (LandType.Property,Position);
 

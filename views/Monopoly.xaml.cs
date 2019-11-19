@@ -138,15 +138,22 @@ namespace Monopoly_TD7
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
-            /*
+            
             Console.WriteLine("======");
             var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
             gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
             if (land != null)
             {
+                Console.WriteLine(land.ToString());
                 land.Purchase(gameMaster.Players[0]);
                 Console.WriteLine(gameMaster.Players[0].Money);
-            }*/
+            }
+
+            
+
+
+
+
         }
     }
 
