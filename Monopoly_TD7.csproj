@@ -144,11 +144,12 @@
     <None Include="appConfig\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\background.jpg" />
     <Resource Include="img\dice.png" />
     <Resource Include="img\start_background.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="img\background.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="img\Setting.jpg" />
   </ItemGroup>

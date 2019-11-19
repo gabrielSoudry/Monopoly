@@ -13,12 +13,35 @@ namespace Monopoly_TD7.model
         private int money;
         private int landPosition;
 
+        private RollingDie die;
+
         public Player(string Name)
         {
             name = Name;
             isDefault = false;
             money = 3000;
             landPosition = 0;
+        }
+
+        public int LandPosition
+        {
+            get
+            {
+                return landPosition;
+            }
+            set
+            {
+                value = landPosition;
+            }
+        }
+
+        public void move()
+        {
+            this.landPosition += die.Roll();
+            if (this.landPosition>39)
+            {
+                this.landPosition %= 39;
+            }
         }
     }
 }

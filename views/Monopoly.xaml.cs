@@ -41,15 +41,16 @@ namespace Monopoly_TD7
             {
                 token.Visibility = Visibility.Visible;
             }
-            Console.WriteLine(Tokens[0]);
-
-            Canvas.SetLeft(Tokens[0], Canvas.GetLeft(Tiles[2]));
-            Canvas.SetTop(Tokens[0], Canvas.GetTop(Tiles[2]));
-
-            Canvas.SetLeft(Tokens[1], Canvas.GetLeft(Tiles[2])+10);
-            Canvas.SetTop(Tokens[1], Canvas.GetTop(Tiles[2]));
-
         }
+
+
+        public void playerSetPosition(int numeroPlayer, int tile)
+        {
+            Canvas.SetLeft(Tokens[numeroPlayer], Canvas.GetLeft(Tiles[tile]));
+            Canvas.SetTop(Tokens[numeroPlayer], Canvas.GetTop(Tiles[tile]));
+        }
+
+
         public void addTileToList()
         {
             
@@ -97,6 +98,11 @@ namespace Monopoly_TD7
             {
                 tile.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void Dice_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

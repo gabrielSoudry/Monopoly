@@ -14,12 +14,12 @@ namespace Monopoly_TD7.model
         static Player currentPlayer;
 
 
-        private GameMasters ()
+        private GameMasters()
         {
             board = new Board();
         }
 
-        public List<Player>  Players
+        public List<Player> Players
         {
             get
             {
@@ -41,5 +41,7 @@ namespace Monopoly_TD7.model
                 return instance;
             }
         }
+
+
     }
 }

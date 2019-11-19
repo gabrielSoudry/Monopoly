@@ -58,7 +58,7 @@
                 <Ellipse x:Name="player3" Fill="Yellow" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="677" Width="19"/>
                 <Ellipse x:Name="player4" Fill="Blue" Height="19" Canvas.Left="664" Stroke="Black" Canvas.Top="677" Width="19"/>
             </Canvas>
-            <Button x:Name="dice" Content="Roll!" Canvas.Left="239" Canvas.Top="244" Width="75"/>
+            <Button x:Name="dice" Content="Roll!" Canvas.Left="239" Canvas.Top="244" Width="75" Click="Dice_Click"/>
             <TextBlock x:Name="gameInfo" Height="82" Canvas.Left="109" TextWrapping="Wrap" Text="" Canvas.Top="216" Width="102"/>
         </Canvas>
 
