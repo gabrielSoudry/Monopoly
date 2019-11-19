@@ -27,7 +27,7 @@ namespace Monopoly_TD7.model
             }
             set
             {
-                Players = value;
+                players = value;
             }
         }
 

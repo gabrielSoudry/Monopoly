@@ -52,8 +52,9 @@ namespace Monopoly_TD7
             if (nbPlayers == 4) { players.Add(player4); }
 
             Console.WriteLine(players[0].Name);
-
+            Console.WriteLine("==");
             game.Players=players;
+            Console.WriteLine("==");
 
             Console.WriteLine(game.Players[1].Name);
 

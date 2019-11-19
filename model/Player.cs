@@ -21,6 +21,7 @@ namespace Monopoly_TD7.model
             isDefault = false;
             money = 3000;
             landPosition = 0;
+            die = new RollingDie();
         }
 
         public int LandPosition
