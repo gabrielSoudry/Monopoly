@@ -34,14 +34,12 @@ namespace Monopoly_TD7
             string files = File.ReadAllText(path);
             Console.WriteLine(files);
 
-            /*
             // We deserialize the gameMaster with the board via json file to avoid to have all the initizialisation in our code 
             GameMasters game = JsonConvert.DeserializeObject<GameMasters>(files, new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
-            */
-            GameMasters game = GameMasters.Instance;
+            GameMasters.Instance = game;
             int nbPlayers = Int32.Parse(cboPickOne.SelectedValue.ToString());
             List<Player> players = new List<Player>(new Player[] { new Player("Player 1"), new Player("Player 2") });
 
@@ -51,11 +49,8 @@ namespace Monopoly_TD7
             if (nbPlayers == 3 || nbPlayers ==4) { players.Add(player3); }
             if (nbPlayers == 4) { players.Add(player4); }
 
-            Console.WriteLine(players[0].Name);
-            Console.WriteLine("==");
             game.Players=players;
-            Console.WriteLine("==");
-
+            
             Console.WriteLine(game.Players[1].Name);
 
             Monopoly a = new Monopoly();

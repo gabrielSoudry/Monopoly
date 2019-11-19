@@ -104,8 +104,12 @@ namespace Monopoly_TD7
 
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
-            gameMaster.Players[0].move();
-            playerSetPosition(0, gameMaster.Players[0].LandPosition);
+            Console.WriteLine("===");
+            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString());
+            Console.WriteLine("===");
+
+             gameMaster.Players[0].move();
+             playerSetPosition(0,gameMaster.Players[0].LandPosition);
         }
 
         private void Purchase(object sender, RoutedEventArgs e)
