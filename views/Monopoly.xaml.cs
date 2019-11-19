@@ -1,4 +1,5 @@
 ﻿using Monopoly_TD7.model;
+using Monopoly_TD7.model.Lands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Monopoly_TD7
     /// <summary>
     /// Interaction logic for midWindow.xaml
     /// </summary>
-    public partial class Monopoly: Window
+    public partial class Monopoly : Window
     {
         List<Rectangle> Tiles = new List<Rectangle>();
         List<Ellipse> Tokens = new List<Ellipse>();
@@ -54,7 +55,7 @@ namespace Monopoly_TD7
 
         public void addTileToList()
         {
-            
+
             Tiles.Add(Tile0);
             Tiles.Add(Tile1);
             Tiles.Add(Tile2);
@@ -103,10 +104,23 @@ namespace Monopoly_TD7
 
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
-             gameMaster.Players[0].move();
-             playerSetPosition(0,gameMaster.Players[0].LandPosition);
+            gameMaster.Players[0].move();
+            playerSetPosition(0, gameMaster.Players[0].LandPosition);
+        }
+
+        private void Purchase(object sender, RoutedEventArgs e)
+        {
+            /*
+            Console.WriteLine("======");
+            var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
+            gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
+            if (land != null)
+            {
+                land.Purchase(gameMaster.Players[0]);
+                Console.WriteLine(gameMaster.Players[0].Money);
+            }*/
         }
     }
-}
 
+}
 

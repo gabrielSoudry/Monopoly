@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Monopoly_TD7.model.Lands
 {
-    class CompanyLand : Land
+    class CompanyLand : Land, ISaleable
     {
 
         public string Name { get; set; }
         public double Price { get; set; }
+        public Player LandOwner { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public CompanyLand() => (Type,Position) = (LandType.Company, Position);
 
@@ -18,6 +19,12 @@ namespace Monopoly_TD7.model.Lands
         {
             Name = name;
             Price = price;
+        }
+
+        public void Purchase(Player player)
+        {
+            LandOwner = player;
+            player.Money -= this.Price;
         }
     }
 }

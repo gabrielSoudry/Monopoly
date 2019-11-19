@@ -10,7 +10,7 @@ namespace Monopoly_TD7.model
     {
         private string name;
         private bool isDefault = false;
-        private int money;
+        private double money;
         private int landPosition;
 
         private RollingDie die;
@@ -38,9 +38,22 @@ namespace Monopoly_TD7.model
 
         public string Name
         {
+
             get
             {
                 return name;
+            }
+        }
+
+        public double Money
+        {
+            get
+            {
+                return money;
+            }
+            set
+            {
+                value = money;
             }
         }
 

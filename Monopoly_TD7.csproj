@@ -76,6 +76,7 @@
     <Compile Include="model\Lands\CompanyLand.cs" />
     <Compile Include="model\Lands\FreeParkLand.cs" />
     <Compile Include="model\Lands\GoToJailLand.cs" />
+    <Compile Include="model\Lands\ISaleable.cs" />
     <Compile Include="model\Lands\RailRoadLand.cs" />
     <Compile Include="model\Lands\TaxLand.cs" />
     <Compile Include="views\Monopoly.xaml.cs">
