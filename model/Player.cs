@@ -35,6 +35,14 @@ namespace Monopoly_TD7.model
             }
         }
 
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
         public void move()
         {
             this.landPosition += die.Roll();
@@ -43,6 +51,7 @@ namespace Monopoly_TD7.model
                 this.landPosition %= 39;
             }
         }
+
     }
 }
 

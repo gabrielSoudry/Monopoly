@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monopoly_TD7.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,7 @@ namespace Monopoly_TD7
     {
         List<Rectangle> Tiles = new List<Rectangle>();
         List<Ellipse> Tokens = new List<Ellipse>();
-
+        GameMasters gameMaster = GameMasters.Instance;
         public Monopoly()
         {
             InitializeComponent();
@@ -102,7 +103,9 @@ namespace Monopoly_TD7
 
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
-
+           /// gameMaster.Players[0].move();
+            ///playerSetPosition(gameMaster.Players[0])
+            
         }
     }
 }

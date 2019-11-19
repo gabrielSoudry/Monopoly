@@ -10,9 +10,6 @@ namespace Monopoly_TD7.model.Lands
     {
         public LandType Type { get; set; }
         public int Position { get; set; }
-
-
-
         public int building;
 
         public enum LandType
