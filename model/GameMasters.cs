@@ -41,6 +41,10 @@ namespace Monopoly_TD7.model
                 }
                 return instance;
             }
+            set
+            {
+                instance = value;
+            }
         }
 
 
