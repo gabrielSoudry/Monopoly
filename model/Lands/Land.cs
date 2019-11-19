@@ -29,7 +29,7 @@ namespace Monopoly_TD7.model.Lands
 
         public override string ToString()
         {
-            return null;
+            return Type.ToString();
         }
     }
 }
