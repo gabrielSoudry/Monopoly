@@ -11,7 +11,7 @@ namespace Monopoly_TD7.model.Lands
 
         public string Name { get; set; }
         public double Price { get; set; }
-        public Player LandOwner { get; set; }
+        public Player LandOwner { get ; set ; }
 
         public CompanyLand() => (Type,Position) = (LandType.Company, Position);
 
