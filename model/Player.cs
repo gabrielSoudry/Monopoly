@@ -54,7 +54,7 @@ namespace Monopoly_TD7.model
             }
             set
             {
-                value = money;
+                money=value;
             }
         }
 

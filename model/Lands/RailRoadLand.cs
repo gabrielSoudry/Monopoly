@@ -10,7 +10,7 @@ namespace Monopoly_TD7.model.Lands
     {
         public string Name { get; set; }
         public double Price { get; set; }
-        public Player LandOwner { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Player LandOwner { get; set; }
 
         public RailRoadLand() => (Type, Position) = (LandType.RailRoad, Position);
         public RailRoadLand(string name, double price)

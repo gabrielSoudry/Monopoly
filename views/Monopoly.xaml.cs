@@ -109,20 +109,15 @@ namespace Monopoly_TD7
          
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("===");
-            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString());
-            Console.WriteLine("===");
-
-          
-            RollingDie a = new RollingDie();
-            int i = 0;
-
             randomDie result = gameMaster.Players[0].move();
+
             dice1.Source = new BitmapImage(new Uri(UrlImageDice(result.die1)));
             dice2.Source = new BitmapImage(new Uri(UrlImageDice(result.die2)));
 
-
             playerSetPosition(0,gameMaster.Players[0].LandPosition);
+            Console.WriteLine("===");
+            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString());
+            Console.WriteLine("===");
         }
 
         public string UrlImageDice(int number)
@@ -147,6 +142,17 @@ namespace Monopoly_TD7
                 land.Purchase(gameMaster.Players[0]);
                 Console.WriteLine(gameMaster.Players[0].Money);
             }*/
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
+            gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
+            if (land != null)
+            {
+                land.Purchase(gameMaster.Players[0]);
+            }
+            
         }
     }
 
