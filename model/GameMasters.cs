@@ -11,7 +11,7 @@ namespace Monopoly_TD7.model
         private static GameMasters instance = null;
         private List<Player> players;
         public Board board;
-        static Player currentPlayer;
+        private Player currentPlayer;
 
 
         private GameMasters()
@@ -46,7 +46,18 @@ namespace Monopoly_TD7.model
                 instance = value;
             }
         }
-
+      
+        public Player CurrentPlayer
+        {
+            get
+            {
+                return currentPlayer;
+            }
+           set
+            {
+                currentPlayer = value;
+            }
+        }
 
     }
 }

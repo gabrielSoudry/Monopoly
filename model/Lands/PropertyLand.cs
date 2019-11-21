@@ -33,12 +33,19 @@ namespace Monopoly_TD7.model.Lands
 
         public void Purchase(Player player)
         {
-            LandOwner = player;
-            Console.WriteLine(player.Money);
-            Console.WriteLine(this.Price);
-            player.Money -= this.Price;
-            GameMasters a = GameMasters.Instance;
-            Console.WriteLine(a.Players[0].Money);
+            if (LandOwner == null)
+            {
+                LandOwner = player;
+                Console.WriteLine(player.Money);
+                Console.WriteLine(this.Price);
+                player.Money -= this.Price;
+                GameMasters a = GameMasters.Instance;
+                Console.WriteLine(a.Players[0].Money);
+            }
+            else
+            {
+                Console.WriteLine("Deja achete");
+            }
         }
     }
 }

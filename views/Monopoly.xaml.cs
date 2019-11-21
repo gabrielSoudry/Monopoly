@@ -109,14 +109,23 @@ namespace Monopoly_TD7
          
         private void Dice_Click(object sender, RoutedEventArgs e)
         {
-            randomDie result = gameMaster.Players[0].move();
+            randomDie result = gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].move();
+
+            Console.WriteLine("===");
+            Console.WriteLine(gameMaster.CurrentPlayer.Name);
+            Console.WriteLine(result.die1);
+            Console.WriteLine("===");
 
             dice1.Source = new BitmapImage(new Uri(UrlImageDice(result.die1)));
             dice2.Source = new BitmapImage(new Uri(UrlImageDice(result.die2)));
 
-            playerSetPosition(0,gameMaster.Players[0].LandPosition);
+            Console.WriteLine(gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
+            playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
+
+            gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)+1)%gameMaster.Players.Count];
+
             Console.WriteLine("===");
-            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString());
+            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
             Console.WriteLine("===");
         }
 
@@ -133,7 +142,6 @@ namespace Monopoly_TD7
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
-            
             Console.WriteLine("======");
             var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
             gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
@@ -143,12 +151,6 @@ namespace Monopoly_TD7
                 land.Purchase(gameMaster.Players[0]);
                 Console.WriteLine(gameMaster.Players[0].Money);
             }
-
-            
-
-
-
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -158,10 +160,8 @@ namespace Monopoly_TD7
             if (land != null)
             {
                 land.Purchase(gameMaster.Players[0]);
-            }
-            
+            }   
         }
     }
-
 }
 
