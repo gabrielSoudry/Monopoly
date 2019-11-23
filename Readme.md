@@ -23,10 +23,12 @@ We design all our project around the MVP architecture using WPF.
 
 The **“model”** folder contains the needed logic and data for the game.
 
-It contains the the logic of our game : 
-- Board.cs :  Contains the logic for how the game board works.
+It contains all the logic of our game : 
+- Board.cs :  Contains the logic for how the game board works. (Array of 40 Lands)
 - GameMaster.cs. : **Singleton** GameMasters class for all the logic, the progress of our game, each turn of our game ! 
-- Land.cs. Folder **Land** contain 
+- Folder **Land** contain each type of Land we have in our board 
 - Player.cs. This file contains logics and data for the player. Money of players, name of players and so on...
 
-The **“views”** folder contains the views of the game
+The **“views”** folder contains the views of the game.
+
+
