@@ -13,8 +13,11 @@ namespace Monopoly_TD7.model
         private bool isDefault = false;
         private double money;
         private int landPosition;
+        private bool isOnJail = false;
+        private int countTurnJail;
+        private int numberOfdouble = 0;
 
-        private RollingDie die;
+        private static RollingDie die;
 
         public Player(string Name)
         {
@@ -33,9 +36,13 @@ namespace Monopoly_TD7.model
             }
             set
             {
-                value = landPosition;
+                landPosition = value;
             }
         }
+
+        public int NumberOfDouble { get; set; }
+
+        public bool Release { get; set; }
 
         public string Name
         {
@@ -58,14 +65,50 @@ namespace Monopoly_TD7.model
             }
         }
 
+        public bool IsOnJail
+        {
+            get
+            {
+                return isOnJail;
+            }
+            set
+            {
+                isOnJail = value;
+            }
+        }
+
         public randomDie move()
         {
             randomDie result = die.Roll();
-            this.landPosition += (result.die1+ result.die2);
+
+            if (!this.isOnJail)
+                this.landPosition += (result.die1+ result.die2);
+            else
+            {
+                // The players leave the jail ! 
+                if (result.die1 == result.die2 || countTurnJail==3) 
+                {
+                    this.isOnJail = false;
+                    this.landPosition += (result.die1 + result.die2);
+                    countTurnJail = 0;
+                    this.Release = true;
+                }
+                else
+                {
+                    countTurnJail++;
+                }
+            }
+
             if (this.landPosition>39)
             {
                 this.landPosition %= 39;
             }
+            if(this.landPosition==30)
+            {
+                this.isOnJail = true;
+                this.landPosition = 10;
+            }
+
             return result;
         }
 

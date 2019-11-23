@@ -43,16 +43,17 @@ namespace Monopoly_TD7
             Tokens.Add(player3);
             Tokens.Add(player4);
 
-            foreach (Ellipse token in Tokens)
-            {
-                token.Visibility = Visibility.Visible;
+            Tokens.ForEach(t => t.Visibility = Visibility.Hidden);
+            for (int i = 0; i < gameMaster.Players.Count; i++) {
+                Tokens[i].Visibility = Visibility.Visible;
             }
+
         }
 
 
         public void playerSetPosition(int numeroPlayer, int tile)
         {
-            Canvas.SetLeft(Tokens[numeroPlayer], Canvas.GetLeft(Tiles[tile]));
+            Canvas.SetLeft(Tokens[numeroPlayer], Canvas.GetLeft(Tiles[tile])+(numeroPlayer+1)*5);
             Canvas.SetTop(Tokens[numeroPlayer], Canvas.GetTop(Tiles[tile]));
         }
 
@@ -111,22 +112,54 @@ namespace Monopoly_TD7
         {
             randomDie result = gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].move();
 
-            Console.WriteLine("===");
+            #region Debug
             Console.WriteLine(gameMaster.CurrentPlayer.Name);
-            Console.WriteLine(result.die1);
+            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
+            Console.WriteLine(gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
             Console.WriteLine("===");
+            #endregion
+
+            // While the player is in jail, he still rolls the dice on his turn as usual, but does not 
+            //move until either:(a) he gets aboth dice with the same value, or(b) he fails to roll both dice
+            //with the same valuefor three times in a row
+            //(i.e. his previous two turns after moving to jail and his current turn)
+
+            //If either(a) or(b) happens in the player's turn, then he moves forward by the sum of the dice rolled positions and his turn ends. 
+            //He doesnot roll the dice again even if he has rolled a both dice with the same value
+
+            if (result.die1 != result.die2)
+            {
+                playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
+                gameMaster.CurrentPlayer.NumberOfDouble = 0;
+                gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
+            }
+            else
+            {
+                gameMaster.CurrentPlayer.NumberOfDouble += 1;
+                if (gameMaster.CurrentPlayer.NumberOfDouble == 3)
+                {
+                    // Put the players on Jail ! 
+                    gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition = 10;
+                    gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].IsOnJail = true;
+                    gameMaster.CurrentPlayer.NumberOfDouble = 0;
+                    playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
+
+                    gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
+                }
+                else if (gameMaster.CurrentPlayer.Release && gameMaster.CurrentPlayer.NumberOfDouble != 3)
+                {
+                    //He doesnot roll the dice again even if he has rolled a both dice with the same value
+                    playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
+                    gameMaster.CurrentPlayer.Release = false;
+
+                    gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
+                }
+            }
+            playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
 
             dice1.Source = new BitmapImage(new Uri(UrlImageDice(result.die1)));
             dice2.Source = new BitmapImage(new Uri(UrlImageDice(result.die2)));
 
-            Console.WriteLine(gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
-            playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
-
-            gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)+1)%gameMaster.Players.Count];
-
-            Console.WriteLine("===");
-            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
-            Console.WriteLine("===");
         }
 
         public string UrlImageDice(int number)

@@ -52,7 +52,6 @@ namespace Monopoly_TD7
             game.Players=players;
             game.CurrentPlayer = game.Players[0];
 
-            Console.WriteLine(game.Players[1].Name);
 
             Monopoly a = new Monopoly();
             this.Close();

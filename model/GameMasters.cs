@@ -47,6 +47,7 @@ namespace Monopoly_TD7.model
             }
         }
       
+
         public Player CurrentPlayer
         {
             get
@@ -58,6 +59,7 @@ namespace Monopoly_TD7.model
                 currentPlayer = value;
             }
         }
+        
 
     }
 }

@@ -17,6 +17,7 @@ namespace Monopoly_TD7.model.Lands
         {
             Name = name;
             Price = price;
+            this.Type = LandType.RailRoad;
         }
 
         public void Purchase(Player player)
