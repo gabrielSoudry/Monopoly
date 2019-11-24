@@ -181,9 +181,15 @@ namespace Monopoly_TD7
         {
             if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
             {
-                Console.WriteLine((gameMaster.Board.lands[(gameMaster.Players.IndexOf(lastPlayer))].Type));
                 land.Purchase(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))]);
+               
+                // Debug
                 Console.WriteLine(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))].Money);
+            }
+            else
+            {
+                // Debug 
+                Console.WriteLine("Cette parcelle n'est pas achetable ! ");
             }
         }
     }
