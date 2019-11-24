@@ -9,27 +9,15 @@ namespace Monopoly_TD7.model
     public sealed class GameMasters
     {
         private static GameMasters instance = null;
-        private List<Player> players;
-        public Board board;
-        private Player currentPlayer;
-
-
+        
         private GameMasters()
         {
-            board = new Board();
+            Board = Board.Instance;
         }
-
-        public List<Player> Players
-        {
-            get
-            {
-                return players;
-            }
-            set
-            {
-                players = value;
-            }
-        }
+        
+        public List<Player> Players { get; set; }
+        public Player CurrentPlayer { get; set; }
+        public Board Board { get; set; }
 
         public static GameMasters Instance
         {
@@ -46,20 +34,5 @@ namespace Monopoly_TD7.model
                 instance = value;
             }
         }
-      
-
-        public Player CurrentPlayer
-        {
-            get
-            {
-                return currentPlayer;
-            }
-           set
-            {
-                currentPlayer = value;
-            }
-        }
-        
-
     }
 }

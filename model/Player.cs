@@ -9,106 +9,57 @@ namespace Monopoly_TD7.model
 {
     public class Player
     {
-        private string name;
-        private bool isDefault = false;
-        private double money;
-        private int landPosition;
-        private bool isOnJail = false;
-        private int countTurnJail;
-        private int numberOfdouble = 0;
-
         private static RollingDie die;
 
-        public Player(string Name)
-        {
-            name = Name;
-            isDefault = false;
-            money = 3000;
-            landPosition = 0;
-            die = new RollingDie();
-        }
-
-        public int LandPosition
-        {
-            get
-            {
-                return landPosition;
-            }
-            set
-            {
-                landPosition = value;
-            }
-        }
-
+        public int LandPosition { get; set; }
         public int NumberOfDouble { get; set; }
-
         public bool Release { get; set; }
-
-        public string Name
+        public bool IsDefault { get; set; }
+        public string Name { get; }
+        public double Money { get; set; }
+        public bool IsOnJail { get; set; }
+        public int CountTurnJail { get; set; }
+       
+        public Player(string name)
         {
-
-            get
-            {
-                return name;
-            }
-        }
-
-        public double Money
-        {
-            get
-            {
-                return money;
-            }
-            set
-            {
-                money=value;
-            }
-        }
-
-        public bool IsOnJail
-        {
-            get
-            {
-                return isOnJail;
-            }
-            set
-            {
-                isOnJail = value;
-            }
+            Name = name;
+            IsDefault = false;
+            Money = 3000;
+            LandPosition = 0;
+            die = new RollingDie();
         }
 
         public randomDie move()
         {
             randomDie result = die.Roll();
 
-            if (!this.isOnJail)
-                this.landPosition += (result.die1+ result.die2);
+            if (!this.IsOnJail)
+                this.LandPosition += (result.die1+ result.die2);
             else
             {
                 // The players leave the jail ! 
-                if (result.die1 == result.die2 || countTurnJail==3) 
+                if (result.die1 == result.die2 || CountTurnJail==3) 
                 {
-                    this.isOnJail = false;
-                    this.landPosition += (result.die1 + result.die2);
-                    countTurnJail = 0;
+                    this.IsOnJail = false;
+                    this.LandPosition += (result.die1 + result.die2);
+                    CountTurnJail = 0;
                     this.Release = true;
                 }
                 else
                 {
-                    countTurnJail++;
+                    CountTurnJail++;
                 }
             }
 
-            if (this.landPosition>39)
+            if (this.LandPosition>39)
             {
-                this.landPosition %= 39;
+                this.LandPosition %= 39;
             }
-            if(this.landPosition==30)
+            if(this.LandPosition==30)
             {
-                this.isOnJail = true;
-                this.landPosition = 10;
+                this.IsOnJail = true;
+                this.LandPosition = 10;
             }
-
             return result;
         }
 

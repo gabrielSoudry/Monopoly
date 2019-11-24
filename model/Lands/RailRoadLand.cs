@@ -13,6 +13,7 @@ namespace Monopoly_TD7.model.Lands
         public Player LandOwner { get ; set ; }
 
         public RailRoadLand() => (Type, Position) = (LandType.RailRoad, Position);
+
         public RailRoadLand(string name, double price)
         {
             Name = name;

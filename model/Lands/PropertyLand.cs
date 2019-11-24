@@ -40,7 +40,9 @@ namespace Monopoly_TD7.model.Lands
                 Console.WriteLine(this.Price);
                 player.Money -= this.Price;
                 GameMasters a = GameMasters.Instance;
-                Console.WriteLine(a.Players[0].Money);
+                Console.WriteLine(a.Players[a.Players.IndexOf(a.CurrentPlayer)].Money);
+                Console.WriteLine("====");
+
             }
             else
             {

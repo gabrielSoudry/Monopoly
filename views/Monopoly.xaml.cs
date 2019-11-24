@@ -28,6 +28,7 @@ namespace Monopoly_TD7
         List<Rectangle> Tiles = new List<Rectangle>();
         List<Ellipse> Tokens = new List<Ellipse>();
         GameMasters gameMaster = GameMasters.Instance;
+        Player lastPlayer;
         public Monopoly()
         {
             InitializeComponent();
@@ -47,13 +48,13 @@ namespace Monopoly_TD7
             for (int i = 0; i < gameMaster.Players.Count; i++) {
                 Tokens[i].Visibility = Visibility.Visible;
             }
-
         }
 
 
         public void playerSetPosition(int numeroPlayer, int tile)
         {
-            Canvas.SetLeft(Tokens[numeroPlayer], Canvas.GetLeft(Tiles[tile])+(numeroPlayer+1)*5);
+            // the shift with numeroPlayer allow  to have multiple "token" on the same tiles (and not superimpose!)
+            Canvas.SetLeft(Tokens[numeroPlayer], Canvas.GetLeft(Tiles[tile])+(numeroPlayer+1)*5); 
             Canvas.SetTop(Tokens[numeroPlayer], Canvas.GetTop(Tiles[tile]));
         }
 
@@ -114,7 +115,7 @@ namespace Monopoly_TD7
 
             #region Debug
             Console.WriteLine(gameMaster.CurrentPlayer.Name);
-            Console.WriteLine(gameMaster.board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
+            Console.WriteLine(gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
             Console.WriteLine(gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
             Console.WriteLine("===");
             #endregion
@@ -129,29 +130,33 @@ namespace Monopoly_TD7
 
             if (result.die1 != result.die2)
             {
+                // If the die ar not the same, we move the players and we pass the turn
                 playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
                 gameMaster.CurrentPlayer.NumberOfDouble = 0;
+                lastPlayer = gameMaster.CurrentPlayer;
                 gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
             }
             else
             {
+                // If the die are the same
                 gameMaster.CurrentPlayer.NumberOfDouble += 1;
                 if (gameMaster.CurrentPlayer.NumberOfDouble == 3)
                 {
-                    // Put the players on Jail ! 
+                    // If it's the third time he make double we put the players on Jail and pass the turn of the player ! 
                     gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition = 10;
                     gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].IsOnJail = true;
                     gameMaster.CurrentPlayer.NumberOfDouble = 0;
                     playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
-
+                    lastPlayer = gameMaster.CurrentPlayer;
                     gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
                 }
                 else if (gameMaster.CurrentPlayer.Release && gameMaster.CurrentPlayer.NumberOfDouble != 3)
                 {
-                    //He doesnot roll the dice again even if he has rolled a both dice with the same value
+                    // If the player is on jail and make an double, we release the player from jail.
+                    // He doesnot roll the dice again even if he has rolled a both dice with the same value
                     playerSetPosition(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer), gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
                     gameMaster.CurrentPlayer.Release = false;
-
+                    lastPlayer = gameMaster.CurrentPlayer;
                     gameMaster.CurrentPlayer = gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer) + 1) % gameMaster.Players.Count];
                 }
             }
@@ -159,7 +164,6 @@ namespace Monopoly_TD7
 
             dice1.Source = new BitmapImage(new Uri(UrlImageDice(result.die1)));
             dice2.Source = new BitmapImage(new Uri(UrlImageDice(result.die2)));
-
         }
 
         public string UrlImageDice(int number)
@@ -175,25 +179,12 @@ namespace Monopoly_TD7
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("======");
-            var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
-            gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
-            if (land != null)
+            if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
             {
-                Console.WriteLine(land.ToString());
-                land.Purchase(gameMaster.Players[0]);
-                Console.WriteLine(gameMaster.Players[0].Money);
+                Console.WriteLine((gameMaster.Board.lands[(gameMaster.Players.IndexOf(lastPlayer))].Type));
+                land.Purchase(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))]);
+                Console.WriteLine(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))].Money);
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var land = (gameMaster.board.lands[gameMaster.Players[0].LandPosition]) as ISaleable;
-            gameMaster.board.lands[gameMaster.Players[0].LandPosition].ToString();
-            if (land != null)
-            {
-                land.Purchase(gameMaster.Players[0]);
-            }   
         }
     }
 }
