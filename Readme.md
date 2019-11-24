@@ -11,9 +11,10 @@ Design Pattern + Uning Testing + C# Naming Conventions + Continuous Integration
 # Project overview
 
 
-Menu            |  Setting
-:-------------------------:|:-------------------------:
-![test](https://drive.google.com/uc?export=view&id=17VpjOB9ku9tJ6lG6Nrc-U1aG3-8VlkqU) |![](https://drive.google.com/uc?export=view&id=1F284N-MQkFerQ-PhZ8XdqEw2h8IUC5hS)
+Menu            |  Gameplay  |  Setting
+:-------------------------:|:-------------------------:|:-------------------------:
+![test](https://drive.google.com/uc?export=view&id=17VpjOB9ku9tJ6lG6Nrc-U1aG3-8VlkqU) |  ![test](https://drive.google.com/uc?export=view&id=1zKlm35FhY3Yrv3a-4kUJNUyjdj5t1oX8) | ![](https://drive.google.com/uc?export=view&id=1F284N-MQkFerQ-PhZ8XdqEw2h8IUC5hS)
+
 
 # Design pattern 
 
