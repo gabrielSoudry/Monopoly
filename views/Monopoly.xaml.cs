@@ -116,7 +116,6 @@ namespace Monopoly_TD7
             #region Debug
             Console.WriteLine(gameMaster.CurrentPlayer.Name);
             Console.WriteLine(gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
-            Console.WriteLine(gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition);
             Console.WriteLine("===");
             #endregion
 
@@ -182,9 +181,6 @@ namespace Monopoly_TD7
             if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
             {
                 land.Purchase(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))]);
-               
-                // Debug
-                Console.WriteLine(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))].Money);
             }
             else
             {
