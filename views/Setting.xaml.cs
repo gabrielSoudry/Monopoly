@@ -39,6 +39,7 @@ namespace Monopoly_TD7
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
+
             GameMasters.Instance = game;
             int nbPlayers = Int32.Parse(cboPickOne.SelectedValue.ToString());
             List<Player> players = new List<Player>(new Player[] { new Player("Player 1"), new Player("Player 2") });

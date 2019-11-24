@@ -36,10 +36,5 @@ namespace Monopoly_TD7
             setting.Show();
             this.Close();
         }
-
-        private void Start_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

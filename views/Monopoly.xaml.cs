@@ -25,10 +25,11 @@ namespace Monopoly_TD7
     /// </summary>
     public partial class Monopoly : Window
     {
-        List<Rectangle> Tiles = new List<Rectangle>();
-        List<Ellipse> Tokens = new List<Ellipse>();
+        readonly List<Rectangle> Tiles = new List<Rectangle>();
+        readonly List<Ellipse> Tokens = new List<Ellipse>();
         GameMasters gameMaster = GameMasters.Instance;
         Player lastPlayer;
+
         public Monopoly()
         {
             InitializeComponent();
@@ -39,11 +40,8 @@ namespace Monopoly_TD7
 
         public void addTokenToList()
         {
-            Tokens.Add(player1);
-            Tokens.Add(player2);
-            Tokens.Add(player3);
-            Tokens.Add(player4);
-
+            Tokens.AddRange(new List<Ellipse> { player1, player2, player3, player4 });
+         
             Tokens.ForEach(t => t.Visibility = Visibility.Hidden);
             for (int i = 0; i < gameMaster.Players.Count; i++) {
                 Tokens[i].Visibility = Visibility.Visible;
@@ -61,47 +59,8 @@ namespace Monopoly_TD7
 
         public void addTileToList()
         {
-
-            Tiles.Add(Tile0);
-            Tiles.Add(Tile1);
-            Tiles.Add(Tile2);
-            Tiles.Add(Tile3);
-            Tiles.Add(Tile4);
-            Tiles.Add(Tile5);
-            Tiles.Add(Tile6);
-            Tiles.Add(Tile7);
-            Tiles.Add(Tile8);
-            Tiles.Add(Tile9);
-            Tiles.Add(Tile10);
-            Tiles.Add(Tile11);
-            Tiles.Add(Tile12);
-            Tiles.Add(Tile13);
-            Tiles.Add(Tile14);
-            Tiles.Add(Tile15);
-            Tiles.Add(Tile16);
-            Tiles.Add(Tile17);
-            Tiles.Add(Tile18);
-            Tiles.Add(Tile19);
-            Tiles.Add(Tile20);
-            Tiles.Add(Tile21);
-            Tiles.Add(Tile22);
-            Tiles.Add(Tile23);
-            Tiles.Add(Tile24);
-            Tiles.Add(Tile25);
-            Tiles.Add(Tile26);
-            Tiles.Add(Tile27);
-            Tiles.Add(Tile28);
-            Tiles.Add(Tile29);
-            Tiles.Add(Tile30);
-            Tiles.Add(Tile31);
-            Tiles.Add(Tile32);
-            Tiles.Add(Tile33);
-            Tiles.Add(Tile34);
-            Tiles.Add(Tile35);
-            Tiles.Add(Tile36);
-            Tiles.Add(Tile37);
-            Tiles.Add(Tile38);
-            Tiles.Add(Tile39);
+            Tiles.AddRange(new List<Rectangle> { Tile0, Tile1, Tile2, Tile3, Tile4, Tile5, Tile6, Tile7, Tile8, Tile9, Tile10, Tile11, Tile12, Tile13, Tile14, Tile15, Tile16, Tile17, Tile18,Tile19, Tile20,
+                                                 Tile21,Tile22,Tile23,Tile24,Tile25,Tile26,Tile27,Tile28,Tile29,Tile30,Tile31,Tile32,Tile33,Tile34,Tile35,Tile36,Tile37,Tile38,Tile39});
             foreach (Rectangle tile in Tiles)
             {
                 tile.Visibility = Visibility.Hidden;
@@ -173,7 +132,6 @@ namespace Monopoly_TD7
             else if (number == 4) { return Directory.GetCurrentDirectory() + @"../../../img/dice4.png"; }
             else if (number == 5) { return Directory.GetCurrentDirectory() + @"../../../img/dice5.png"; }
             else { return Directory.GetCurrentDirectory() + @"../../../img/dice6.png"; }
-
         }
 
         private void Purchase(object sender, RoutedEventArgs e)
