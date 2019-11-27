@@ -143,6 +143,7 @@ In our example the 'is' operator will ensure that the land which the player is t
 
 Here is the UML diagram of the strategy pattern adapted with some of our project classes: 
 ![enter image description here](https://lh3.googleusercontent.com/mueE8My7tZivgphruN2oPmTKKSiAvYRKepBY8izDNVcEHjtzHCFR4A9b-vGvP9nYmxqDnv0805fT "UML")
+
 For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the purchase method, unlike the StartLand and a ChanceLand that couldn't be bought.
 
 
