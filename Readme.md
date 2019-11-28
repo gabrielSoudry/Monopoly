@@ -57,6 +57,7 @@ Here is an example of our Json file.
 
 # Design pattern 
 
+## MVP
 We design all our project around the MVP architecture using WPF.
 
 **Model–view–presenter**  (**MVP**) is a derivation of the  model–view–controller "Model–view–controller")  (MVC)  architectural pattern, and is used mostly for building user interfaces.
@@ -78,7 +79,7 @@ The **“presenter”**  Acts upon the model and the view. It retrieves data fro
 
 
 
-*Singleton :* 
+## Singleton
 A singelton is a Creational design pattern , a singleton class should have some propeties :
 
 1) it should have only one instance :  outter classes and subclasses cannot create an instace of the class and this is possible beacause of a private class constructor. 
@@ -87,16 +88,16 @@ A singelton is a Creational design pattern , a singleton class should have some 
 
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/330px-Singleton_UML_class_diagram.svg.png)
 
-In our project, players use a unique monopoly bord game and this board should be accessible by all of the other classes, so the use of a singleton pattern is relevant.
+In our project, players use a unique monopoly **bord** game and this board should be accessible by all of the other classes, so the use of a singleton pattern is relevant.
 
-     public sealed class Board
+    public sealed class Board
     {
         private static Board instance = null;
         private static readonly object padlock = new object();
         public Land[] lands { get; set; }
     
         private Board() => (lands) = (new Land[40]);
-
+        
         public static Board Instance
         {
             get
@@ -108,15 +109,13 @@ In our project, players use a unique monopoly bord game and this board should be
                 return instance;
             }
         }
-
     }
-
 
 We can observe that our Board construcor is private and our Board Instance method will ensure that a Board doesn't exist before creating a new board.
 
 The GameMasters class also use a singleton design pattern.
 
-*Strategy Pattern :*
+## Strategy Pattern 
 A strategy pattern is a Behavioral pattern, it define a family of algorithms, encapsulate each one, and make them interchangeable. Capture the abstraction in an interface, bury implementation details in derived classes.
 
 
@@ -124,7 +123,7 @@ A strategy pattern is a Behavioral pattern, it define a family of algorithms, en
 
 In our project we used a strategy pattern to manage the buy button functionality (that will call the Buy method). In fact we decided to take the game a step further by making possible for players to buy the lands that could be bought all around the board.  
 
-     private void Buy(object sender, RoutedEventArgs e)
+        private void Buy(object sender, RoutedEventArgs e)
         {
             if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
             {
@@ -153,14 +152,13 @@ Our Strategy is the ISaleable interface, that has 2 methods.
     {
         void Purchase(Player player);
         Player LandOwner { get; set; }
-
     }
 
 
 The lands that could be bought will use the ISaleable interface and implement its methods. Here is an example of the purchase method implemented in the PropertyLand class (Concrete Strategy). If the land has no owner it could be bought, otherwise it cannot. 
 
 
-    public void Purchase(Player player)
+        public void Purchase(Player player)
         {
             if (LandOwner == null)
             {
@@ -171,7 +169,6 @@ The lands that could be bought will use the ISaleable interface and implement it
                 GameMasters a = GameMasters.Instance;
                 Console.WriteLine(a.Players[a.Players.IndexOf(a.CurrentPlayer)].Money);
                 Console.WriteLine("====");
-
             }
             else
             {
