@@ -16,7 +16,7 @@ namespace Monopoly_TD7.model.Lands
         public string Color { get; set; }
         public Player LandOwner { get ; set ; }
 
-        public PropertyLand ()=> (Type,Position,SealableStrategy) = (LandType.Property,Position, new PurchasableStrategy(Price));
+        public PropertyLand ()=> (Type,SealableStrategy) = (LandType.Property,new PurchasableStrategy(Price));
 
         public PropertyLand(double price, string name,int[] multipledrent, string color)
         {
