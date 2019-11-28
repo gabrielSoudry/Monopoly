@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monopoly_TD7.model.Lands.StategyPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Monopoly_TD7.model.Lands
 {
-    class PropertyLand : Land, ISaleable
+    class PropertyLand : Land
     {
        
         public double Price { get; set; }
@@ -15,7 +16,7 @@ namespace Monopoly_TD7.model.Lands
         public string Color { get; set; }
         public Player LandOwner { get ; set ; }
 
-        public PropertyLand ()=> (Type,Position) = (LandType.Property,Position);
+        public PropertyLand ()=> (Type,Position,SealableStrategy) = (LandType.Property,Position, new PurchasableStrategy(Price));
 
         public PropertyLand(double price, string name,int[] multipledrent, string color)
         {
@@ -24,30 +25,12 @@ namespace Monopoly_TD7.model.Lands
             Name = name;
             Multipledrent = multipledrent;
             Color = color;
+            SealableStrategy = new PurchasableStrategy(Price);
         }
 
         public override string ToString()
         {
             return Name;
-        }
-
-        public void Purchase(Player player)
-        {
-            if (LandOwner == null)
-            {
-                LandOwner = player;
-                Console.WriteLine(player.Money);
-                Console.WriteLine(this.Price);
-                player.Money -= this.Price;
-                GameMasters a = GameMasters.Instance;
-                Console.WriteLine(a.Players[a.Players.IndexOf(a.CurrentPlayer)].Money);
-                Console.WriteLine("====");
-
-            }
-            else
-            {
-                Console.WriteLine("Deja achete");
-            }
         }
     }
 }

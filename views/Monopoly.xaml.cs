@@ -136,9 +136,10 @@ namespace Monopoly_TD7
 
         private void Purchase(object sender, RoutedEventArgs e)
         {
-            if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
+            if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition].SealableStrategy.
+                                        Purchase(gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)]))
             {
-                land.Purchase(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))]);
+                Console.WriteLine("done ! ");
             }
             else
             {

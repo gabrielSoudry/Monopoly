@@ -76,8 +76,10 @@
     <Compile Include="model\Lands\CompanyLand.cs" />
     <Compile Include="model\Lands\FreeParkLand.cs" />
     <Compile Include="model\Lands\GoToJailLand.cs" />
-    <Compile Include="model\Lands\ISaleable.cs" />
+    <Compile Include="model\Lands\StategyPattern\NotPurshasableStrategy.cs" />
+    <Compile Include="model\Lands\StategyPattern\PurchasableStrategy.cs" />
     <Compile Include="model\Lands\RailRoadLand.cs" />
+    <Compile Include="model\Lands\StategyPattern\SealableStrategy.cs" />
     <Compile Include="model\Lands\TaxLand.cs" />
     <Compile Include="views\Monopoly.xaml.cs">
       <DependentUpon>Monopoly.xaml</DependentUpon>

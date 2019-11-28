@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Monopoly_TD7.model.Lands.StategyPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Monopoly_TD7.model.Lands
     {
         public string Name { get; set; }
         public double Price { get; set; }
-        public TaxLand() => (Type, Position) = (LandType.Tax, Position);
+        public TaxLand() => (Type, SealableStrategy) = (LandType.Tax, new NotPurchasableStrategy());
 
         public TaxLand(string name, double price)
         {
