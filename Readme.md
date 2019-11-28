@@ -158,22 +158,17 @@ Our Strategy is the ISaleable interface, that has 2 methods.
 The lands that could be bought will use the ISaleable interface and implement its methods. Here is an example of the purchase method implemented in the PropertyLand class (Concrete Strategy). If the land has no owner it could be bought, otherwise it cannot. 
 
 
-        public void Purchase(Player player)
-        {
+        public boolean Purchase(Player player)
+        { 
+            boolean result = false;
             if (LandOwner == null)
             {
                 LandOwner = player;
-                Console.WriteLine(player.Money);
-                Console.WriteLine(this.Price);
                 player.Money -= this.Price;
                 GameMasters a = GameMasters.Instance;
-                Console.WriteLine(a.Players[a.Players.IndexOf(a.CurrentPlayer)].Money);
-                Console.WriteLine("====");
+                result = true;
             }
-            else
-            {
-                Console.WriteLine("Deja achete");
-            }
+            return result;
         }
 
 
