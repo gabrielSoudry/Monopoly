@@ -1,4 +1,5 @@
 ﻿using Monopoly_TD7.model;
+using Monopoly_TD7.model.Lands;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -54,9 +56,9 @@ namespace Monopoly_TD7
             game.CurrentPlayer = game.Players[0];
 
 
-            Monopoly a = new Monopoly();
+            Monopoly b = new Monopoly();
             this.Close();
-            a.Show();
+            b.Show();
         }   
     }
 }

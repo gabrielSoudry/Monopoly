@@ -139,12 +139,13 @@ namespace Monopoly_TD7
             if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition].SealableStrategy.
                                         Purchase(gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)]))
             {
+                // Debug 
                 Console.WriteLine("done ! ");
             }
             else
             {
                 // Debug 
-                Console.WriteLine("Cette parcelle n'est pas achetable ! ");
+                Console.WriteLine("Cette parcelle n'est pas achetable ! (Non achetable / deja achete par un autre joueuer ");
             }
         }
     }
