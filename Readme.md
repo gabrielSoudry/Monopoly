@@ -30,13 +30,19 @@ Here is an example of our Json file.
         "$type": "Monopoly_TD7.model.Lands.StartLand, Monopoly_TD7",
         "building": 0,
         "Type": 0,
-        "Position": 0
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        }
       },
       {
         "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
         "building": 0,
-        "Ownedby": null,
         "Price": 60.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 60.0
+        },
         "Name": "Mediterranean Avenue",
         "Multipledrent": [
           2,
@@ -48,9 +54,16 @@ Here is an example of our Json file.
         ],
         "Color": "brown",
         "Type": 1,
-        "Position": 0
       },
-
+      {
+        "$type": "Monopoly_TD7.model.CommunityChestLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 4,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+ 
 
 
 
@@ -76,7 +89,7 @@ The **“views”** folder contains the views of the game. View is a component w
 
 
 The **“presenter”**  Acts upon the model and the view. It retrieves data from the model, and displays it in the view. The Presenter receives the input from users via View, then process the user’s data with the help of Model and passing the results back to the View. Presenter communicates with view through interface. Interface is defined in presenter class, to which it pass the required data.
-
+It correspond to our .cs files of our .xaml files.
 
 
 ## Singleton
