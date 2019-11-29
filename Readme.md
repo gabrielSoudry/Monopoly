@@ -150,41 +150,34 @@ In our project we used a strategy pattern to manage the buy button functionality
         }
 
 
-To do so,  we used the 'is' operator that checks if the result of an expression is compatible with a given type and, if it can be, casts it to a variable of that type. 
-In our example the 'is' operator will ensure that the land which the player is trying to buy have the ISaleable interface.  Then if it has the interface it will create a local variable 'land' and apply the ISaleable Purchase method to it.
+To do so,  we used the strategy pattern.
 
 Here is the UML diagram of the strategy pattern adapted with some of our project classes: 
 ![enter image description here](https://lh3.googleusercontent.com/mueE8My7tZivgphruN2oPmTKKSiAvYRKepBY8izDNVcEHjtzHCFR4A9b-vGvP9nYmxqDnv0805fT "UML")
 
-For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the purchase method, unlike the StartLand and a ChanceLand that couldn't be bought.
+For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the behavior CanPurchasableStrategy in attribute  SealableStrategy, unlike the StartLand and a ChanceLand that couldn't be bought => they implemented the behavior NotPurchasableStrategy in their attribute "SealableStrategy".
 
-
-Our Strategy is the ISaleable interface, that has 2 methods.
-
-    interface ISaleable
+```
+public class PurchasableStrategy : SealableStrategy
     {
-        void Purchase(Player player);
-        Player LandOwner { get; set; }
-    }
+        public Player LandOwner { get; set; }
+        public double Price { get; set; }
 
+        public PurchasableStrategy(double price) =>(Price) = (price);
+       
+        public override bool Purchase(Player player)
+        {
+            bool result = false;
 
-The lands that could be bought will use the ISaleable interface and implement its methods. Here is an example of the purchase method implemented in the PropertyLand class (Concrete Strategy). If the land has no owner it could be bought, otherwise it cannot. 
-
-
-        public boolean Purchase(Player player)
-        { 
-            boolean result = false;
             if (LandOwner == null)
             {
                 LandOwner = player;
-                player.Money -= this.Price;
-                GameMasters a = GameMasters.Instance;
+                player.Money -= Price;
                 result = true;
             }
             return result;
         }
-
-
-
+    }
+```
 
 
