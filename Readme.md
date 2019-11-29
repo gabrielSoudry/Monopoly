@@ -143,6 +143,38 @@ Here is the UML diagram of the strategy pattern adapted with some of our project
 
 For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the behavior CanPurchasableStrategy in attribute  SealableStrategy, unlike the StartLand and a ChanceLand that couldn't be bought => they implemented the behavior NotPurchasableStrategy in their attribute "SealableStrategy".
 
+Here an exemple directly in the code source of the implementation: 
+```
+   abstract public class Land
+    {
+        public SealableStrategy SealableStrategy { get; set; }
+
+        public LandType Type { get; set; }
+        public int building;
+
+        public enum LandType
+        {
+            Start,
+            Property,
+            GoToJail,
+            VisitJail,
+            CommunityChest,
+            FreePark,
+            Tax,
+            RailRoad,
+            Chance,
+            Company
+
+        }
+
+        public override string ToString()
+        {
+            return Type.ToString();
+        }
+    }
+}
+```
+
 ```
 public class PurchasableStrategy : SealableStrategy
     {
@@ -166,4 +198,32 @@ public class PurchasableStrategy : SealableStrategy
     }
 ```
 
+```
+class PropertyLand : Land
+    {
+        public double Price { get; set; }
+        public String Name { get; set; }
+        public int [] Multipledrent { get; set; }
+        public string Color { get; set; }
+        public Player LandOwner { get ; set ; }
+
+        public PropertyLand ()=> (Type,SealableStrategy) = (LandType.Property,new PurchasableStrategy(Price));
+
+        public PropertyLand(double price, string name,int[] multipledrent, string color)
+        {
+            Type = LandType.Property;
+            Price = price;
+            Name = name;
+            Multipledrent = multipledrent;
+            Color = color;
+            SealableStrategy = new PurchasableStrategy(Price);
+        }
+
+        public override string ToString()
+        {
+            return Name;
+        }
+    }
+
+```
 
