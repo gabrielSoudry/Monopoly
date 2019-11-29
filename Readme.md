@@ -136,20 +136,6 @@ A strategy pattern is a Behavioral pattern, it define a family of algorithms, en
 
 In our project we used a strategy pattern to manage the buy button functionality (that will call the Buy method). In fact we decided to take the game a step further by making possible for players to buy the lands that could be bought all around the board.  
 
-        private void Buy(object sender, RoutedEventArgs e)
-        {
-            if (gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(lastPlayer)].LandPosition] is ISaleable land)
-            {
-                land.Purchase(gameMaster.Players[(gameMaster.Players.IndexOf(gameMaster.CurrentPlayer))]);
-            }
-            else
-            {
-                // Debug 
-                Console.WriteLine("Cette parcelle n'est pas achetable ! ");
-            }
-        }
-
-
 To do so,  we used the strategy pattern.
 
 Here is the UML diagram of the strategy pattern adapted with some of our project classes: 
