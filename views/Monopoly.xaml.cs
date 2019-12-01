@@ -145,7 +145,7 @@ namespace Monopoly_TD7
             else
             {
                 // Debug 
-                Console.WriteLine("Cette parcelle n'est pas achetable ! (Non achetable / deja achete par un autre joueuer ");
+                Console.WriteLine("Not purchasable land ! (Not buyable land / already bought by another player ");
             }
         }
     }

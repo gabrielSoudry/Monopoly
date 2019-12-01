@@ -9,7 +9,6 @@ namespace Monopoly_TD7.model.Lands
 {
     class PropertyLand : Land
     {
-       
         public double Price { get; set; }
         public String Name { get; set; }
         public int [] Multipledrent { get; set; }
