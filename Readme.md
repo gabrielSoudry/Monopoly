@@ -1,4 +1,5 @@
 
+
 # Monopoly
 
 [![Alt img description](https://ci.appveyor.com/api/projects/status/github/gabi22top/monopoly?svg=true)](https://ci.appveyor.com/project/gabi22top/monopoly)
@@ -98,9 +99,8 @@ A singelton is a Creational design pattern , a singleton class should have some 
 1) it should have only one instance :  outter classes and subclasses cannot create an instace of the class and this is possible beacause of a private class constructor. 
 
 2) instance should be globally accessible : it is done by making the access-specifier of instance public.
-
-![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Singleton_UML_class_diagram.svg/330px-Singleton_UML_class_diagram.svg.png)
-
+![
+](https://lh3.googleusercontent.com/_d1zC88lu_UvzGp1huKQCA-VDDDxCobIA3Z9FQutQzz50CQynryqhV75GlGUvT8rBiONn695Aamc "uml")
 In our project, players use a unique monopoly **bord** game and this board should be accessible by all of the other classes, so the use of a singleton pattern is relevant.
 
     public sealed class Board
@@ -139,7 +139,8 @@ In our project we used a strategy pattern to manage the buy button functionality
 To do so,  we used the strategy pattern.
 
 Here is the UML diagram of the strategy pattern adapted with some of our project classes: 
-![enter image description here](https://lh3.googleusercontent.com/mueE8My7tZivgphruN2oPmTKKSiAvYRKepBY8izDNVcEHjtzHCFR4A9b-vGvP9nYmxqDnv0805fT "UML")
+![
+](https://lh3.googleusercontent.com/fhKstvbqtpskoopAK0RYDn2xMGa3R2tCJ_kJarepT0MJkgwzC-sDLuve7_CRbem6jQgeopL2oOeP "uml")
 
 For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the behavior CanPurchasableStrategy in attribute  SealableStrategy, unlike the StartLand and a ChanceLand that couldn't be bought => they implemented the behavior NotPurchasableStrategy in their attribute "SealableStrategy".
 
