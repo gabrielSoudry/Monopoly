@@ -140,7 +140,7 @@ To do so,  we used the strategy pattern.
 
 Here is the UML diagram of the strategy pattern adapted with some of our project classes: 
 ![
-](https://lh3.googleusercontent.com/fhKstvbqtpskoopAK0RYDn2xMGa3R2tCJ_kJarepT0MJkgwzC-sDLuve7_CRbem6jQgeopL2oOeP "uml")
+](https://lh3.googleusercontent.com/Qh8CuqOsnCPMToBnxotbB8TP3moona5x8KxeIBrEHkD4F_Jq_0W6p4P79Jy3caEK6wOQPXw-2GSx "UML")
 
 For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the behavior CanPurchasableStrategy in attribute  SealableStrategy, unlike the StartLand and a ChanceLand that couldn't be bought => they implemented the behavior NotPurchasableStrategy in their attribute "SealableStrategy".
 
@@ -224,7 +224,6 @@ class PropertyLand : Land
         {
             return Name;
         }
-    }
-
-```
+    }![
+]
 
