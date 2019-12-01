@@ -99,8 +99,10 @@ A singelton is a Creational design pattern , a singleton class should have some 
 1) it should have only one instance :  outter classes and subclasses cannot create an instace of the class and this is possible beacause of a private class constructor. 
 
 2) instance should be globally accessible : it is done by making the access-specifier of instance public.
+
 ![
-](https://lh3.googleusercontent.com/_d1zC88lu_UvzGp1huKQCA-VDDDxCobIA3Z9FQutQzz50CQynryqhV75GlGUvT8rBiONn695Aamc "uml")
+](https://lh3.googleusercontent.com/7TzhJUwzGHONt6NbQYUM6EdXWmL4MrBXhynDnaHeRs8MsiQJjTc4BiJOdXg1RjMYAzQ8vfBMlB5y "uml")
+
 In our project, players use a unique monopoly **bord** game and this board should be accessible by all of the other classes, so the use of a singleton pattern is relevant.
 
     public sealed class Board
@@ -134,7 +136,7 @@ A strategy pattern is a Behavioral pattern, it define a family of algorithms, en
 
 ![enter image description here](https://www.dofactory.com/images/diagrams/net/strategy.gif)
 
-In our project we used a strategy pattern to manage the buy button functionality (that will call the Buy method). In fact we decided to take the game a step further by making possible for players to buy the lands that could be bought all around the board. (Add on of the inital TD Subject)
+In our project we used a strategy pattern to manage the buy button functionality (that will call the Buy method). In fact we decided to take the game a step further by making possible for players to buy the lands that could be bought all around the board.  
 
 To do so,  we used the strategy pattern.
 
@@ -143,10 +145,6 @@ Here is the UML diagram of the strategy pattern adapted with some of our project
 ](https://lh3.googleusercontent.com/Qh8CuqOsnCPMToBnxotbB8TP3moona5x8KxeIBrEHkD4F_Jq_0W6p4P79Jy3caEK6wOQPXw-2GSx "UML")
 
 For example a PropertyLand and a RailRoadLAnd could be bought so each class implement the behavior CanPurchasableStrategy in attribute  SealableStrategy, unlike the StartLand and a ChanceLand that couldn't be bought => they implemented the behavior NotPurchasableStrategy in their attribute "SealableStrategy".
-
-We could in fact use just an Interface to do the same think. But we wanted to have an very reusability code and not duplicate code
-of function purchase in our code. 
-Since there is no default implementation of purchase behavior we may have code duplicity. You may have to rewrite the same purchase behavior over and over in many subclasses (RailRoalLand + PropertyLand). To avoid that we use the strategy pattern.
 
 Here an exemple directly in the code source of the implementation: 
 ```
@@ -230,7 +228,4 @@ class PropertyLand : Land
         }
     }![
 ]
-```
-## Conclusion 
 
-It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console😋).
