@@ -100,8 +100,7 @@ A singelton is a Creational design pattern , a singleton class should have some 
 
 2) instance should be globally accessible : it is done by making the access-specifier of instance public.
 
-![
-](https://lh3.googleusercontent.com/7TzhJUwzGHONt6NbQYUM6EdXWmL4MrBXhynDnaHeRs8MsiQJjTc4BiJOdXg1RjMYAzQ8vfBMlB5y "uml")
+![enter image description here](https://lh3.googleusercontent.com/KBuKJQQDe8zn7TLUqM73E9tJlYt36Tg1dIb1Wxbvy5mXbZwxi26igzvGyOhPojAivmzHhQiqAyx7 "UML")
 
 In our project, players use a unique monopoly **bord** game and this board should be accessible by all of the other classes, so the use of a singleton pattern is relevant.
 
@@ -235,4 +234,4 @@ class PropertyLand : Land
 ```
 ## Conclusion
 
-It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console 🙂).
+It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console😋).
