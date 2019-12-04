@@ -126,12 +126,12 @@ namespace Monopoly_TD7
 
         public string UrlImageDice(int number)
         {
-            if (number == 1) { return Directory.GetCurrentDirectory() + @"../../../img/dice1.png"; }
-            else if (number == 2) { return Directory.GetCurrentDirectory() + @"../../../img/dice2.png"; }
-            else if (number == 3) { return Directory.GetCurrentDirectory() + @"../../../img/dice3.png"; }
-            else if (number == 4) { return Directory.GetCurrentDirectory() + @"../../../img/dice4.png"; }
-            else if (number == 5) { return Directory.GetCurrentDirectory() + @"../../../img/dice5.png"; }
-            else { return Directory.GetCurrentDirectory() + @"../../../img/dice6.png"; }
+            if (number == 1) { return Directory.GetCurrentDirectory() + @"../../../res/img/dice1.png"; }
+            else if (number == 2) { return Directory.GetCurrentDirectory() + @"../../../res/img/dice2.png"; }
+            else if (number == 3) { return Directory.GetCurrentDirectory() + @"../../../res/img/dice3.png"; }
+            else if (number == 4) { return Directory.GetCurrentDirectory() + @"../../../res/img/dice4.png"; }
+            else if (number == 5) { return Directory.GetCurrentDirectory() + @"../../../res/img/dice5.png"; }
+            else { return Directory.GetCurrentDirectory() + @"../../../res/img/dice6.png"; }
         }
 
         private void Purchase(object sender, RoutedEventArgs e)

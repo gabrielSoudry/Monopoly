@@ -9,7 +9,7 @@
     <Grid>
         <Grid HorizontalAlignment="Left" Height="319" Margin="226,0,0,0" VerticalAlignment="Top" Width="291">
             <Grid.Background>
-                <ImageBrush ImageSource="/img/start_background.jpg" Stretch="UniformToFill"/>
+                <ImageBrush ImageSource="/res/img/start_background.jpg" Stretch="UniformToFill"/>
             </Grid.Background>
         </Grid>
         <Button x:Name="Start" Content="Start new game" HorizontalAlignment="Left" Height="33" Margin="39,155,0,0" VerticalAlignment="Top" Width="137" Click="StartMonopoly"/>

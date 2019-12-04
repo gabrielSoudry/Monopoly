@@ -11,7 +11,7 @@
         <Canvas x:Name="empty" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="368">
             <Canvas x:Name="canvas" HorizontalAlignment="Left" Width="683" Height="696" VerticalAlignment="Bottom">
                 <Canvas.Background>
-                    <ImageBrush ImageSource="/img/background.jpg" Stretch="Fill"/>
+                    <ImageBrush ImageSource="../res/img/background.jpg" Stretch="Fill"/>
                 </Canvas.Background>
                 <Rectangle x:Name="Tile22" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="55" Canvas.Left="146" Canvas.Top="5"/>
                 <Rectangle x:Name="Tile23" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="91" Stroke="Black" VerticalAlignment="Top" Width="59" Canvas.Left="201" Canvas.Top="5"/>
@@ -57,14 +57,14 @@
                 <Ellipse x:Name="player1" Fill="Red" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="646" Width="19"/>
                 <Ellipse x:Name="player3" Fill="Yellow" Height="19" Canvas.Left="633" Stroke="Black" Canvas.Top="677" Width="19"/>
                 <Ellipse x:Name="player4" Fill="Blue" Height="19" Canvas.Left="664" Stroke="Black" Canvas.Top="677" Width="19"/>
-                <Image x:Name="dice1" Height="67" Canvas.Left="425" Canvas.Top="322" Width="71" Source="../img/dice1.png"  />
-                <Image x:Name="dice2" Height="67" Canvas.Left="510" Canvas.Top="322" Width="69" Source="/Monopoly_TD7;component/img/dice2.png"  />
+                <Image x:Name="dice1" Height="67" Canvas.Left="425" Canvas.Top="322" Width="71" Source="../res/img/dice1.png"  />
+                <Image x:Name="dice2" Height="67" Canvas.Left="510" Canvas.Top="322" Width="69" Source="/Monopoly_TD7;component/res/img/dice2.png"  />
                 <Button x:Name="buy" Content="Buy!" Height="28" Canvas.Left="233" Canvas.Top="532" Width="80" Click="Purchase"/>
             </Canvas>
             <Button x:Name="dice" Content="Roll!" Canvas.Left="239" Canvas.Top="244" Width="75" Click="Dice_Click"/>
             <TextBlock x:Name="gameInfo" Height="82" Canvas.Left="109" TextWrapping="Wrap" Text="" Canvas.Top="216" Width="102" />
         </Canvas>
-        <Image x:Name="image1"  Source="../img/dice.png" HorizontalAlignment="Left" Height="100" Margin="694,48,-0.4,0" VerticalAlignment="Top" Width="100"/>
+        <Image x:Name="image1"  Source="../res/img/dice.png" HorizontalAlignment="Left" Height="100" Margin="694,48,-0.4,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,636 @@
+{
+  "board": {
+    "lands": [
+      {
+        "$type": "Monopoly_TD7.model.Lands.StartLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        }
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 60.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 60.0
+        },
+        "Name": "Mediterranean Avenue",
+        "Multipledrent": [
+          2,
+          10,
+          30,
+          90,
+          160,
+          250
+        ],
+        "Color": "brown",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.CommunityChestLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 4,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 60.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 60.0
+        },
+        "Name": "Baltic Avenue",
+        "Multipledrent": [
+          4,
+          20,
+          60,
+          180,
+          320,
+          450
+        ],
+        "Color": "brown",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.TaxLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "Income Tax",
+        "Price": 200.0,
+        "Type": 6,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.RailRoadLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "Reading Railroad",
+        "Price": 200.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 200.0
+        },
+        "Type": 7,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 100.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 100.0
+        },
+        "Name": "Oriental Avenue",
+        "Multipledrent": [
+          6,
+          30,
+          90,
+          270,
+          400,
+          550
+        ],
+        "Color": "blue",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.ChanceLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 8,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 100.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 100.0
+        },
+        "Name": "Vermont Avenue",
+        "Multipledrent": [
+          6,
+          30,
+          90,
+          270,
+          400,
+          550
+        ],
+        "Color": "blue",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 120.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 120.0
+        },
+        "Name": "Connecticut Avenue",
+        "Multipledrent": [
+          8,
+          40,
+          100,
+          300,
+          450,
+          600
+        ],
+        "Color": "blue",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.JailLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 3,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+	  {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 140.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 140.0
+        },
+        "Name": "St. Charles Place",
+        "Multipledrent": [
+          10,
+          50,
+          150,
+          450,
+          625,
+          750
+        ],
+        "Color": "pink",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.CompanyLand, Monopoly_TD7",
+        "building": 9,
+        "Name": "Electric Company",
+        "Price": 150.0,
+        "Type": 9,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 140.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 140.0
+        },
+        "Name": "States Avenue",
+        "Multipledrent": [
+          10,
+          50,
+          150,
+          450,
+          625,
+          750
+        ],
+        "Color": "pink",
+        "Type": 1,
+      },
+	   {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 160.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 160.0
+        },
+        "Name": "Virginia Avenue",
+        "Multipledrent": [
+          12,
+          60,
+          180,
+          500,
+          700,
+          900
+        ],
+        "Color": "pink",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.RailRoadLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "Pensylvania Railroad",
+        "Price": 200.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 200.0
+        },
+        "Type": 7,
+      },
+	   {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 180.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 180.0
+        },
+        "Name": "St. James Place",
+        "Multipledrent": [
+          14,
+          70,
+          200,
+          550,
+          750,
+          950
+        ],
+        "Color": "orange",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.CommunityChestLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 4,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 180.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 180.0
+        },
+        "Name": "Tennessee Avenue",
+        "Multipledrent": [
+          14,
+          70,
+          200,
+          550,
+          750,
+          950
+        ],
+        "Color": "orange",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 200.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 200.0
+        },
+        "Name": "New York Avenue",
+        "Multipledrent": [
+          16,
+          80,
+          220,
+          600,
+          800,
+          1000
+        ],
+        "Color": "orange",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.FreeParkLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 5,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 220.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 220.0
+        },
+        "Name": "Kentucky Avenue",
+        "Multipledrent": [
+          18,
+          90,
+          250,
+          700,
+          875,
+          1050
+        ],
+        "Color": "red",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.ChanceLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 8,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 220.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 220.0
+        },
+        "Name": "Indiana Avenue",
+        "Multipledrent": [
+          18,
+          90,
+          250,
+          700,
+          875,
+          1050
+        ],
+        "Color": "red",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 240.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 240.0
+        },
+        "Name": "Illnois Avenue",
+        "Multipledrent": [
+          20,
+          100,
+          300,
+          750,
+          925,
+          1100
+        ],
+        "Color": "red",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.RailRoadLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "B. & O. Railroad",
+        "Price": 200.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 200.0
+        },
+        "Type": 7,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 260.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 260.0
+        },
+        "Name": "Atlatic Avenue",
+        "Multipledrent": [
+          22,
+          110,
+          330,
+          800,
+          975,
+          1150
+        ],
+        "Color": "yellow",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 260.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 260.0
+        },
+        "Name": "Ventura Avenue",
+        "Multipledrent": [
+          22,
+          110,
+          330,
+          800,
+          975,
+          1150
+        ],
+        "Color": "yellow",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.CompanyLand, Monopoly_TD7",
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+        "building": 0,
+        "Name": "Water Works",
+        "Price": 150.0,
+        "Type": 9,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 280.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 280.0
+        },
+        "Name": "Marvin Gardens",
+        "Multipledrent": [
+          24,
+          120,
+          360,
+          850,
+          1025,
+          1200
+        ],
+        "Color": "yellow",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.GoToJailLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 2,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 300.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 300.0
+        },
+        "Name": "Pacific Avenue",
+        "Multipledrent": [
+          26,
+          130,
+          390,
+          900,
+          1100,
+          1275
+        ],
+        "Color": "green",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 300.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 300.0
+        },
+        "Name": "North Carolina Avenue",
+        "Multipledrent": [
+          26,
+          130,
+          390,
+          900,
+          1100,
+          1275
+        ],
+        "Color": "green",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.CommunityChestLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 4,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 320.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 320.0
+        },
+        "Name": "Pennsylvania Avenue",
+        "Multipledrent": [
+          28,
+          150,
+          450,
+          1000,
+          1200,
+          1400
+        ],
+        "Color": "green",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.RailRoadLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "Shortline",
+        "Price": 200.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 200.0
+        },
+        "Type": 7,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.ChanceLand, Monopoly_TD7",
+        "building": 0,
+        "Type": 8,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 350.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 350.0
+        },
+        "Name": "Park Place",
+        "Multipledrent": [
+          35,
+          175,
+          500,
+          1100,
+          1300,
+          1500
+        ],
+        "Color": "black",
+        "Type": 1,
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.TaxLand, Monopoly_TD7",
+        "building": 0,
+        "Name": "Luxury Tax",
+        "Price": 100.0,
+        "Type": 6,
+		 "SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.NotPurchasableStrategy, Monopoly_TD7"
+        },
+      },
+      {
+        "$type": "Monopoly_TD7.model.Lands.PropertyLand, Monopoly_TD7",
+        "building": 0,
+        "Price": 400.0,
+		"SealableStrategy": {
+          "$type": "Monopoly_TD7.model.Lands.StategyPattern.PurchasableStrategy, Monopoly_TD7",
+          "LandOwner": null,
+          "Price": 400.0
+        },
+        "Name": "Boardwalk",
+        "Multipledrent": [
+          50,
+          200,
+          600,
+          1400,
+          1700,
+          2000
+        ],
+        "Color": "black",
+        "Type": 1,
+      }
+    ]
+  }
+}

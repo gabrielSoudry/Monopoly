@@ -141,30 +141,30 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="res\board.json" />
+    <None Include="res\dataBoard\board.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="appConfig\App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\dice.png" />
-    <Resource Include="img\start_background.jpg" />
+    <Resource Include="res\img\dice.png" />
+    <Resource Include="res\img\start_background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\background.jpg" />
+    <Resource Include="res\img\background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\Setting.jpg" />
+    <Resource Include="res\img\Setting.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\dice1.png" />
-    <Resource Include="img\dice2.png" />
-    <Resource Include="img\dice4.png" />
-    <Resource Include="img\dice5.png" />
-    <Resource Include="img\dice6.png" />
+    <Resource Include="res\img\dice1.png" />
+    <Resource Include="res\img\dice2.png" />
+    <Resource Include="res\img\dice4.png" />
+    <Resource Include="res\img\dice5.png" />
+    <Resource Include="res\img\dice6.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\dice3.png" />
+    <Resource Include="res\img\dice3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

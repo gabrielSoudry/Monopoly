@@ -30,12 +30,16 @@ namespace Monopoly_TD7
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+        /// <summary>
+        /// Initialization of the game's parameters and launch of the game
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"board.json");
+            string path = Directory.GetCurrentDirectory() + @"../../../res/dataBoard/board.json";
             string files = File.ReadAllText(path);
-            Console.WriteLine(files);
-
+            
             // We deserialize the gameMaster with the board via json file to avoid to have all the initizialisation in our code 
             GameMasters game = JsonConvert.DeserializeObject<GameMasters>(files, new JsonSerializerSettings
             {
@@ -43,6 +47,7 @@ namespace Monopoly_TD7
             });
 
             GameMasters.Instance = game;
+
             int nbPlayers = Int32.Parse(cboPickOne.SelectedValue.ToString());
             List<Player> players = new List<Player>(new Player[] { new Player("Player 1"), new Player("Player 2") });
 
@@ -54,7 +59,6 @@ namespace Monopoly_TD7
 
             game.Players=players;
             game.CurrentPlayer = game.Players[0];
-
 
             Monopoly b = new Monopoly();
             this.Close();
