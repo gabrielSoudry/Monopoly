@@ -73,10 +73,8 @@ namespace Monopoly_TD7
         {
             randomDie result = gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].move();
 
-            //Console.WriteLine(gameMaster.CurrentPlayer.Name);
-            //Console.WriteLine(gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString());
-            //Console.WriteLine("===");
-
+            Console.WriteLine(gameMaster.CurrentPlayer.Name + "\n"+gameMaster.Board.lands[gameMaster.Players[gameMaster.Players.IndexOf(gameMaster.CurrentPlayer)].LandPosition].ToString()+"\n"+"======");
+           
             // While the player is in jail, he still rolls the dice on his turn as usual, but does not 
             //move until either:(a) he gets aboth dice with the same value, or(b) he fails to roll both dice
             //with the same valuefor three times in a row
