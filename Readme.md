@@ -235,4 +235,4 @@ class PropertyLand : Land
 ```
 ## Conclusion
 
-It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console😋).
+It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console 🙂).
