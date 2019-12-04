@@ -3,7 +3,6 @@
 # Monopoly
 
 [![Alt img description](https://ci.appveyor.com/api/projects/status/github/gabi22top/monopoly?svg=true)](https://ci.appveyor.com/project/gabi22top/monopoly)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fe424edf098b4765b6fc1cbb72dd7cb4)](https://www.codacy.com/manual/gabi22top/Monopoly?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gabi22top/Monopoly&amp;utm_campaign=Badge_Grade)
 
 # Presentation of project 
