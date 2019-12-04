@@ -9,9 +9,6 @@ namespace Monopoly_TD7.model.Lands
 {
     class StartLand : Land
     {
-        const int REWARD = 200;
-
         public StartLand() => (Type, SealableStrategy) = (LandType.Start, new NotPurchasableStrategy());
-
     }
 }

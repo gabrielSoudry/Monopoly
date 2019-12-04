@@ -34,11 +34,13 @@ namespace Monopoly_TD7.model
             randomDie result = die.Roll();
 
             if (!this.IsOnJail)
-                this.LandPosition += (result.die1+ result.die2);
+            {
+                this.LandPosition += (result.die1 + result.die2);
+            }
             else
             {
                 // The players leave the jail ! 
-                if (result.die1 == result.die2 || CountTurnJail==3) 
+                if (result.die1 == result.die2 || CountTurnJail == 3)
                 {
                     this.IsOnJail = false;
                     this.LandPosition += (result.die1 + result.die2);

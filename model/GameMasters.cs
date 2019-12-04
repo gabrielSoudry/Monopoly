@@ -8,7 +8,7 @@ namespace Monopoly_TD7.model
 {
     public sealed class GameMasters
     {
-        private static GameMasters instance = null;
+        private static GameMasters instance;
         
         private GameMasters()
         {

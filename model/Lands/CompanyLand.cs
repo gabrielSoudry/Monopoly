@@ -25,7 +25,9 @@ namespace Monopoly_TD7.model.Lands
 
         public void Purchase(Player player)
         {
+            #if DEBUG
             Console.WriteLine(this.Price);
+            #endif
             LandOwner = player;
             player.Money -= this.Price;
         }

@@ -12,7 +12,7 @@ namespace Monopoly_TD7.model.Lands
         public SealableStrategy SealableStrategy { get; set; }
 
         public LandType Type { get; set; }
-        public int building;
+        private int building;
 
         public enum LandType
         {

@@ -10,8 +10,7 @@ namespace Monopoly_TD7.model
 {
     public sealed class Board
     {
-        private static Board instance = null;
-        private static readonly object padlock = new object();
+        private static Board instance;
         public Land[] lands { get; set; }
     
         private Board() => (lands) = (new Land[40]);
