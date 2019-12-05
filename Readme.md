@@ -11,10 +11,9 @@ Design Pattern + Uning Testing + C# Naming Conventions + Continuous Integration
 
 ## Project overview
 
-
 Menu            |  Gameplay  |  Setting
 :-------------------------:|:-------------------------:|:-------------------------:|
-![test](https://drive.google.com/uc?export=view&id=17VpjOB9ku9tJ6lG6Nrc-U1aG3-8VlkqU) |  ![test](https://drive.google.com/uc?export=view&id=1zKlm35FhY3Yrv3a-4kUJNUyjdj5t1oX8) | ![](https://drive.google.com/uc?export=view&id=1F284N-MQkFerQ-PhZ8XdqEw2h8IUC5hS)
+![test](https://drive.google.com/uc?export=view&id=17VpjOB9ku9tJ6lG6Nrc-U1aG3-8VlkqU) |  ![test](https://drive.google.com/uc?export=view&id=1zKlm35FhY3Yrv3a-4kUJNUyjdj5t1oX8) | ![](https://drive.google.com/uc?export=view&id=1F284N-MQkFerQ-PhZ8XdqEw2h8IUC5hS)|
 
 The Game Board : 
 The Monopoly game board is composed of 40 squares, that could be property, railroad, tax, jail ... The player could visit them during the game. The 40 squares won't change during the game and don't change between each game. So instead of writing these datas directly in the code we decided to serialize each square in a Json file and deserialize them when we need to create the Board.
@@ -42,7 +41,7 @@ Here is an example of our Json file.
           "LandOwner": null,
           "Price": 60.0
         },
-        "Name": "Mediterranean Avenue",
+        "Name": "Mediterranean Avenue",|
         "Multipledrent": [
           2,
           10,
@@ -63,9 +62,9 @@ Here is an example of our Json file.
         },
       },
  ```
-# Design pattern 
+## Design pattern 
 
-## MVP
+### MVP
 We design all our project around the MVP architecture using WPF.
 
 **Model–view–presenter**  (**MVP**) is a derivation of the  model–view–controller "Model–view–controller")  (MVC)  architectural pattern, and is used mostly for building user interfaces.
@@ -75,17 +74,17 @@ We design all our project around the MVP architecture using WPF.
 The **“model”** folder contains the needed logic and data for the game. The Model represents a set of classes that describes the business logic and data. It also defines business rules for data means how the data can be changed and manipulated.
 
 It contains all the logic of our game : 
-  - Board.cs :  Contains the logic for how the game board works. (Array of 40 Lands)
-  - GameMaster.cs. : **Singleton** GameMasters class for all the logic, the progress of our game, each turn of our game ! 
-  - Folder **Land** contain each type of Land we have in our board 
-  - Player.cs. This file contains logics and data for the player. Money of players, name of players and so on...
+- Board.cs :  Contains the logic for how the game board works. (Array of 40 Lands)
+- GameMaster.cs. : **Singleton** GameMasters class for all the logic, the progress of our game, each turn of our game ! 
+- Folder **Land** contain each type of Land we have in our board 
+- Player.cs. This file contains logics and data for the player. Money of players, name of players and so on...
 
 The **“views”** folder contains the views of the game. View is a component which is directly interacts with user like XML, Activity, fragments. It does not contain any logic implemented.
 
 The **“presenter”**  Acts upon the model and the view. It retrieves data from the model, and displays it in the view. The Presenter receives the input from users via View, then process the user’s data with the help of Model and passing the results back to the View. Presenter communicates with view through interface. Interface is defined in presenter class, to which it pass the required data.
 It correspond to our .cs files of our .xaml files.
 
-## Singleton
+### Singleton
 A singelton is a Creational design pattern , a singleton class should have some propeties :
 
 1) it should have only one instance :  outter classes and subclasses cannot create an instace of the class and this is possible beacause of a private class constructor. 
@@ -121,7 +120,7 @@ We can observe that our Board construcor is private and our Board Instance metho
 
 The GameMasters class also use a singleton design pattern.
 
-## Strategy Pattern 
+### Strategy Pattern 
 A strategy pattern is a Behavioral pattern, it define a family of algorithms, encapsulate each one, and make them interchangeable. Capture the abstraction in an interface, bury implementation details in derived classes.
 
 ![enter image description here](https://www.dofactory.com/images/diagrams/net/strategy.gif)
@@ -223,6 +222,6 @@ class PropertyLand : Land
     }![
 ]
 ```
-# Conclusion
+## Conclusion
 
 It was an interesting project, we tried to write the cleanest code possible using the design patterns. We didn't code the whole game because the interest was quite limited and we went around the technical side. I hope you will appreciate the cleanliness of the code and the effort to make the code as readable and reusable as possible. And of course the pretty graphical interface (makes quickly but prettier than the console 🙂).
